@@ -7,12 +7,15 @@ categories: ai
 # Using deep learning to automatically break CAPTCHAs
 Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) is a way of differentiating humans and machines and was coined by von Ahn, Blum, Hopper, and Langford [5]. The core idea is that reading distorted letters, numbers, or images is achievable for a human but very hard or impossible for a computer. CAPTCHAs might look like the one below. Most likely the reader has already seen one, when trying to register at a website or write a comment online.
 
+
+This project was conducted together with [Tharidu](https://github.com/tharidu) and [Akash](https://github.com/akash13singh).
+
 <span class="image left"><img src="{{ site.url }}/images/blog/captcha/Penguin-Pal_Captcha.png" alt="" /></span>
 
 
 There are several use cases for CAPTCHAs, which includes the ones presented in [6]: Preventing comment spam, protect website registration, protect e-mail addresses from scrappers, protect online polls, preventing dictionary attacks, and block/hinder search engine bots.
 
-CAPTCHAs do not give a guarantee that it prevents these cases every time as there are known attack vectors. These include cheap or unwitting human labor, insecure implementation, and machine learning based attacks. We will not go into detail on insecure implementations, as the focus of this article are deep learning based approaches. This project was conducted together with [Tharidu](https://github.com/tharidu) and [Akash](https://github.com/akash13singh).
+CAPTCHAs do not give a guarantee that it prevents these cases every time as there are known attack vectors. These include cheap or unwitting human labor, insecure implementation, and machine learning based attacks. We will not go into detail on insecure implementations, as the focus of this article are deep learning based approaches.
 
 ### Human based CAPTCHA breaking
 Out of curiosity and to compare results achieved by machine learning approaches, we take a look at the human based approach. For example [BypassCAPTCHA](http://bypassCAPTCHA.com/order1.php) offers breaking CAPTCHAs with cheap human labor in packages (e.g. 20,000 CAPTCHAs for 130$). There are also other services including [Image Typerz](http://www.imagetyperz.com/Forms/bypassCAPTCHA.aspx), [ExpertDecoders](http://expertdecoders.com/), and [9kw.eu](https://www.9kw.eu/). There are also hybrid solutions that use both OCR and human labor like [DeathByCAPTCHA](http://deathbyCAPTCHA.com/user/login). These vendors list the following accuracies and response times (averages):
