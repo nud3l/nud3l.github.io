@@ -16,39 +16,16 @@
 	<body id="top">
 
 		<!-- Header -->
-		<header id="header">
-		  <div class="inner">
-		    <a href="index.html" class="image avatar"><img src="images/dominik.png" alt="" /></a>
-		    <h1>I am <strong>Dominik</strong>, a computer <br />
-		    science enthusiast, blockchain <br />
-		    hacker and entrepreneur</a>.</h1>
-		  </div>
-		</header>
-
+		{% include main_header.html %}
 
 		<!-- Main -->
     {{ content }}
 
 		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://se.linkedin.com/in/dominik-harz-03240a37" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/nud3l" class="icon fa-github"><span class="label">Github</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Dominik Harz, 2017</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		{% include footer.html %}
 
-      <!-- Scripts -->
-  			<script src={{ "assets/js/jquery.min.js" | absolute_url }}></script>
-  			<script src={{ "assets/js/jquery.poptrox.min.js" | absolute_url }}></script>
-  			<script src={{ "assets/js/skel.min.js" | absolute_url }}></script>
-  			<script src={{ "assets/js/util.js" | absolute_url }}></script>
-  			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-  			<script src={{ "assets/js/main.js" | absolute_url }}></script>t>
-				{% include analytics.html %}
+		<!-- Scripts -->
+		{% include scripts.html %}
+		{% include analytics.html %}
 	</body>
 </html>

@@ -8,6 +8,7 @@ categories: general
 ## Interactive resume
 Talk to my chatbot to learn more about me and my projects. Please note, that this bot is in a beta status and still needs to learn quite a bit. The bot only speaks English for now.
 
+
 <iframe
     width="350"
     height="430"
