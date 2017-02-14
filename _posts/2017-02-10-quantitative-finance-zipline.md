@@ -44,6 +44,7 @@ decided to use the open source implementation of the Quantopian framework [zipli
 ## Getting started with zipline
 Zipline is based on python and is able to run with python 2 and 3. Quantopian has created a [beginners tutorial](www.zipline.io/beginner-tutorial.html) on their website. Before going into the details of zipline, let us look into how to set it up locally. Note: I will be using python3 throughout this post.
 To install zipline you first need all the required C extensions. For Debian based distributions use the command shown below, otherwise there are some more details [provided here](www.zipline.io/install.html){:target="_blank"}.
+
 ```
 sudo apt-get install libatlas-base-dev python-dev gfortran pkg-config libfreetype6-dev
 ```
@@ -62,16 +63,16 @@ The algorithm to be implemented is inspired by Benjamin Graham [6]
 Let's take a look at our [algorithm](https://github.com/nud3l/dInvest/blob/master/trading/recommender/InvestHandlerSimple.py){:target="_blank"}.
 It is basically taken from the web-based version of zipline called Quantopian and can be found [here](https://www.quantopian.com/posts/grahamfundmantals-algo-simple-screening-on-benjamin-graham-number-fundamentals){:target="_blank"}. I have tried to include quite some comments, so if you are familiar with python then the code should be quite readable. Zipline does not include the full functionality and data to realize the investment algorithm. The market capitalization data, sector codes, and PE ratio are not accessible from zipline. For a quick overview of the current code and the changes I made, I will go through the main functions. Also, please note that I only used free sources of financial data. There seem to be a lot of other sources available, but they have their price tag.
 
-```initialize(context)```:  Defines the number of sectors we are interested in and also schedules to execution of our algorithm for back-testing.
+```initialize(context)``` Defines the number of sectors we are interested in and also schedules to execution of our algorithm for back-testing.
 
-```rebalance(context, data)```: This essentially takes to selected assets and distributes them evenly into our portfolio.
+```rebalance(context, data)``` This essentially takes to selected assets and distributes them evenly into our portfolio.
 
-```get_fundamentals(context, data)```: In Quantopian this is fairly easy, since the Morningstar fundamentals dataset is included. However, in zipline I had to find a workaround. Quandl offers the SF0 fundamentals for free: [www.quandl.com/data/SF0-Free-US-Fundamentals-Data](www.quandl.com/data/SF0-Free-US-Fundamentals-Data). To get a full view of the data, I choose to download the whole data as a CSV file and automated the process. An example of how to do this can be found in the ```TradeHandler.getData(self)``` function [here](https://github.com/nud3l/dInvest/blob/master/trading/trader/TradeHandler.py){:target="_blank"}.
+```get_fundamentals(context, data)``` In Quantopian this is fairly easy, since the Morningstar fundamentals dataset is included. However, in zipline I had to find a workaround. Quandl offers the SF0 fundamentals for free: [www.quandl.com/data/SF0-Free-US-Fundamentals-Data](www.quandl.com/data/SF0-Free-US-Fundamentals-Data). To get a full view of the data, I choose to download the whole data as a CSV file and automated the process. An example of how to do this can be found in the ```TradeHandler.getData(self)``` function [here](https://github.com/nud3l/dInvest/blob/master/trading/trader/TradeHandler.py){:target="_blank"}.
 
-```get_sectors(key)```: Again, this is included in Quantopian, but needs a manual workaround. To get the sector codes it is quite simple. You need to download a txt file, which includes the sector codes and the function will read them into a dict.
+```get_sectors(key)``` Again, this is included in Quantopian, but needs a manual workaround. To get the sector codes it is quite simple. You need to download a txt file, which includes the sector codes and the function will read them into a dict.
 
 
-```get_sector_code()```: Also, this part is included in Quantopian. Here we download a JSON file to get a mapping of sector codes to the financial assets we are trading.
+```get_sector_code()``` Also, this part is included in Quantopian. Here we download a JSON file to get a mapping of sector codes to the financial assets we are trading.
 
 To analyse the performance of the investment algorithm the absolute returns, Sharpe, alpha, and beta for the
 period of January 1, 2009 to November 15, 2016 is compared. The investment algorithm uses the Quandl
