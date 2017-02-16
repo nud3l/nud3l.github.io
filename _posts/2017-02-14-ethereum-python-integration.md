@@ -84,5 +84,5 @@ blacklist = self.contract.call().blackListCompanies()
 
 There are some more examples in the [GitHub code available](https://github.com/nud3l/dInvest/blob/master/trading/contract/ContractHandler.py).
 
-### Final notes
+### Final note
 As a final note, I would like to point out that there are other blockchain solutions like [Hyperledger Fabric](hyperledger-fabric.readthedocs.io/en/latest/) or [Tendermint](tendermint.com) that aim to solve issues around compatibility with other programming language, transaction throughput etc. As they are permissioned blockchains I haven't yet given them a try, but might be interesting to take a look at.
