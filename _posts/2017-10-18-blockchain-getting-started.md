@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Getting started and resources on blockchain"
+title:  "Blockchain getting started and further resources"
+subtitle: "Blockchain getting started and further resources"
 date:   2017-10-18
 categories: blockchain
 ---
