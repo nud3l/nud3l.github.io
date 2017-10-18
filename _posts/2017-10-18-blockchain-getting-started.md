@@ -4,6 +4,7 @@ title:  "Blockchain getting started and further resources"
 subtitle: "Blockchain getting started and further resources"
 date:   2017-10-18
 categories: blockchain
+authors: Dominik
 ---
 
 Blockchains have become a somewhat big hype and when I got into the field the number of resources was still sparse. I am trying to compile here a list of getting started guides and resources that I find generally useful. These are not limited to blockchain related aspects, but will also cover general CS related resources I find useful for blockchain development. Also, the resources are somewhat research related.
