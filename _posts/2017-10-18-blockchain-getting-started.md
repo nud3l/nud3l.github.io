@@ -5,7 +5,7 @@ date:   2017-10-18
 categories: blockchain
 ---
 
-Blockchains have become a somewhat big hype and when I got into the field the number of resources was still sparse. I am trying to compile here a list of getting started guides and resources that I find generally useful. These are not limited to only blockchain related aspects, but will cover also general CS related resources I find useful for blockchain development. Also, the resources are somewhat research related.
+Blockchains have become a somewhat big hype and when I got into the field the number of resources was still sparse. I am trying to compile here a list of getting started guides and resources that I find generally useful. These are not limited to blockchain related aspects, but will also cover general CS related resources I find useful for blockchain development. Also, the resources are somewhat research related.
 
 I am trying my best to keep this list up-to-date.
 
