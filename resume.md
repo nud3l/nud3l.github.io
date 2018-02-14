@@ -9,9 +9,15 @@ categories: general
 
 ## Experience
 
+<span class="image logo"><img src="images/resume/imperial.png" alt="" /></span>
+**Research Assistant at Imperial College London** <br/>
+*October 2017 - Present (5 months) in London, UK* <br/>
+Research multi-agent systems on distributed ledgers including verifiable computations, reputation management systems, smart contracts, and agent negotiations.
+Coordinating research projects between Imperial College Centre for Cryptocurrency Research and Engineering with Outlier Ventures to advance cryptocurrency, blockchain, and distributed ledger technology.
+
 <span class="image logo"><img src="images/resume/SICS.png" alt="" /></span>
 **Research Smart Contracts at SICS Swedish ICT** <br/>
-*November 2016 - Present (3 months) in Stockholm, Sweden* <br/>
+*November 2016 - June 2017 (8 months) in Stockholm, Sweden* <br/>
 Master thesis project on trust in smart contracts ecosystems. This project creates a reusable, systematic overview of levels of trust of current blockchain and smart contract applications. Also, an algorithm to enable transparent interaction between smart contracts and external systems is researched and developed.
 
 <span class="image logo"><img src="images/resume/CM.png" alt="" /></span>
@@ -30,19 +36,23 @@ Consulting and auditing global corporations and SMEs in the financial, telecommu
 Developing a concept for a private cloud infrastructure for SAP based services. Participating in daily tasks of the network, virtual platforms, SAP consulting and infrastructure consulting departments. Planning and executing technical implementations including in-depth hands-on experience with Cisco and Juniper devices.
 
 ## Education
+<span class="image logo"><img src="images/resume/imperial.png" alt="" /></span>
+**PhD Computing at Imperial College London** <br/>
+*October 2017 - Present (5 months) in London, UK* <br/>
+Research multi-agent systems on distributed ledgers including verifiable computations, reputation management systems, smart contracts, and agent negotiations at the Imperial Centre for Cryptocurrency Research and Engineering.
 
 <span class="image logo"><img src="images/resume/kth.png" alt="" /></span>
-**MSc. Computer Science at KTH Royal Institute of Technology** <br/>
+**MSc Computer Science at KTH Royal Institute of Technology** <br/>
 *September 2016 - June 2017 (1 year) in Stockholm, Sweden* <br/>
 Holding an EIT Digital Master School full scholarship for studying distributed computing with courses in distributed AI, scalable machine learning and deep learning as well as data intensive computing.
 
 <span class="image logo"><img src="images/resume/delft.png" alt="" /></span>
-**MSc. Computer Science at Delft University of Technology** <br/>
+**MSc Computer Science at Delft University of Technology** <br/>
 *September 2015 - August 2016 (1 year) in Delft, The Netherlands* <br/>
 Holding an EIT Digital Master School full scholarship for studying distributed computing with courses in cloud computing, distributed systems, ICT innovation, pattern recognition, and web engineering.
 
 <span class="image logo"><img src="images/resume/dhbw.png" alt="" /></span>
-**BSc. Business Information Systems at Cooperative State University Mannheim** <br/>
+**BSc Business Information Systems at Cooperative State University Mannheim** <br/>
 *September 2009 - September 2012 (3 years) in Mannheim, The Germany* <br/>
 Bachelor studies focusing on databases, software engineering, algorithms, statistics, business, economics, finance, and inter-cultural management.
 
