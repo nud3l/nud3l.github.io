@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/dominik89
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://dominikharz.me
+  * I am dominik89 (https://keybase.io/dominik89) on keybase.
+  * I have a public key ASCXQod0QxNDUl5HbNVWkKHrZzBTUmRn_1XwZoI21-6Tcwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b4aa177749b26bdecf5f5fa6c67f97cdf1e352048c54f47a4722accf5066fa0b0a",
+      "host": "keybase.io",
+      "kid": "012097428774431343525e476cd55690a1eb673053526467ff55f0668236d7ee93730a",
+      "uid": "6dd33bfc4265f453d72e10bfebafc119",
+      "username": "dominik89"
+    },
+    "merkle_root": {
+      "ctime": 1518762353,
+      "hash": "7f536a286454c71013e590a06df4da0488ed4605888088d8eaa87978e7536178976ecc490e7bd5b08f36497d06961f75e4f7d74175161573429d49eb556c780d",
+      "hash_meta": "26399f76f82ec7f34299c5a80c4066fa3a952ac649ffdf42bf92f76d7fc2728a",
+      "seqno": 2110295
+    },
+    "service": {
+      "hostname": "dominikharz.me",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.41"
+  },
+  "ctime": 1518762364,
+  "expire_in": 504576000,
+  "prev": "4de09e448954f5ebae7a108491e155bad619c4ae27816e4eea9e15869cb1a64d",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgl0KHdEMTQ1JeR2zVVpCh62cwU1JkZ/9V8GaCNtfuk3MKp3BheWxvYWTFA0d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjRhYTE3Nzc0OWIyNmJkZWNmNWY1ZmE2YzY3Zjk3Y2RmMWUzNTIwNDhjNTRmNDdhNDcyMmFjY2Y1MDY2ZmEwYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOTc0Mjg3NzQ0MzEzNDM1MjVlNDc2Y2Q1NTY5MGExZWI2NzMwNTM1MjY0NjdmZjU1ZjA2NjgyMzZkN2VlOTM3MzBhIiwidWlkIjoiNmRkMzNiZmM0MjY1ZjQ1M2Q3MmUxMGJmZWJhZmMxMTkiLCJ1c2VybmFtZSI6ImRvbWluaWs4OSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxODc2MjM1MywiaGFzaCI6IjdmNTM2YTI4NjQ1NGM3MTAxM2U1OTBhMDZkZjRkYTA0ODhlZDQ2MDU4ODgwODhkOGVhYTg3OTc4ZTc1MzYxNzg5NzZlY2M0OTBlN2JkNWIwOGYzNjQ5N2QwNjk2MWY3NWU0ZjdkNzQxNzUxNjE1NzM0MjlkNDllYjU1NmM3ODBkIiwiaGFzaF9tZXRhIjoiMjYzOTlmNzZmODJlYzdmMzQyOTljNWE4MGM0MDY2ZmEzYTk1MmFjNjQ5ZmZkZjQyYmY5MmY3NmQ3ZmMyNzI4YSIsInNlcW5vIjoyMTEwMjk1fSwic2VydmljZSI6eyJob3N0bmFtZSI6ImRvbWluaWtoYXJ6Lm1lIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC40MSJ9LCJjdGltZSI6MTUxODc2MjM2NCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI0ZGUwOWU0NDg5NTRmNWViYWU3YTEwODQ5MWUxNTViYWQ2MTljNGFlMjc4MTZlNGVlYTllMTU4NjljYjFhNjRkIiwic2Vxbm8iOjIwLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQNdpogHcL+q9ipVQ1SbPPMTnH8HGduLSq2R0uD8BA7QEJJRtrf/Bw1dBFJdsOYOwdQ25SlLuFqoP8c9Ak2tCfgGoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBrWTSLPGieltGk9X9I5CZGswVQHq/RXfw0bjaejy92eaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dominik89
+
+================================================================== 
