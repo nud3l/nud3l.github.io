@@ -1,0 +1,24 @@
+---
+layout: page
+title: Contact
+---
+Feel free to send me a message to discuss about things like technology, blockchains, cyber-security, and AI.
+
+<p>
+    <form method="POST" action="https://formspree.io/hello.dominik42@gmail.com">
+        <div class="row">
+            <div class="six columns">
+                <label for="NameInput">Your name</label>
+                <input class="u-full-width" type="text" placeholder="name" id="name">
+            </div>
+            <div class="six columns">
+                <label for="EmailInput">Your email</label>
+                <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="email">
+            </div>
+        </div>
+        <label for="exampleMessage">Message</label>
+        <textarea class="u-full-width" placeholder="Hi Dominik …" id="message" name="message"></textarea>
+        <input type="hidden" name="_next" value="{{ page.url }}/thanks.html" />
+        <input class="button-primary" type="submit" value="Send">
+    </form>
+</p>

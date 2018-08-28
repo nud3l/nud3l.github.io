@@ -11,14 +11,13 @@ Blockchains have become a somewhat big hype and when I got into the field the nu
 
 I am trying my best to keep this list up-to-date.
 
-### Blockchain
+##### Blockchain
+
 - This gives a good summary of what blockchain is and the different ideas development around it. Quite high level and does not go into much technical details, but usable for getting started: [What is blockchain by Blockgeeks](https://blockgeeks.com/guides/what-is-blockchain-technology/).
 
-### Ethereum
-- This one is fairly old (Oct 2015), but in my humble opinion still one of the best starting resources to wrap your head around the concepts of blockchain and Ethereum specifically. However, the code is examples are old and for looking into actual code, I would recommend other resources. [101 Noon Intro to Smart Contracts by ConsenSys](https://medium.com/@ConsenSys/a-101-noob-intro-to-programming-smart-contracts-on-ethereum-695d15c1dab4).
+##### Ethereum
+
+- This one is fairly old (Oct 2015), but in my humble opinion still one of the best starting resources to wrap your head around the concepts of blockchain and Ethereum specifically. However, the code is examples are old and for looking into actual code, I would recommend other resources. [101 Noob Intro to Smart Contracts by ConsenSys](https://medium.com/@ConsenSys/a-101-noob-intro-to-programming-smart-contracts-on-ethereum-695d15c1dab4).
 - This one goes into a bit more detail on the programming part is somewhat up-to-date. [Getting started as Etheruem dev](https://hackernoon.com/getting-started-as-an-ethereum-web-developer-9a2a4ab47baf)
 - This is directly from the Ethereum project website and is updated with recent code examples, so a good way to get started once you got the basic concepts. [Decentralised Autonomous Organisation](https://ethereum.org/dao)
 
-### IOTA
-- Introduction and primer to IOTA: [A Primer on IOTA (with Presentation)](https://blog.iota.org/a-primer-on-iota-with-presentation-e0a6eb2cc621).
-- Getting started guide on IOTA and "Hello World" application: [Payments and messaging leader-board](https://learn.iota.org/tutorial/payments-and-messaging-leaderboard).

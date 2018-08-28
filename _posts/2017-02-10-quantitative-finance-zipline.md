@@ -19,7 +19,8 @@ in. An overview of the different strategies that are currently applied by differ
 HFR, Inc in [3]. Measuring the performance of hedge funds as well as specific influence factors is a wide
 research area, which is covered in more detail in our report.
 
-### Measuring success of investments
+##### Measuring success of investments
+
 A common standard in literature and the investment practice to compare hedge funds is based on
 their absolute returns, Sharpe ratio, alpha and beta as well as a comparison to benchmarks [2].
 
@@ -29,7 +30,8 @@ their absolute returns, Sharpe ratio, alpha and beta as well as a comparison to 
 - Beta: The beta value shows the volatility of the fund in comparison to a benchmark. The beta value baseline is one and represents the same volatility as the benchmark. A value below one indicates a lower volatility and consequently a value above one a higher volatility than the benchmark.
 
 
-### Quantitiative finance
+##### Quantitiative finance
+
 To implement an investment strategy, certain rule sets are developed and applied. Quantitative finance
 ”translates” economic models into the mathematical world and allows to apply for example stochastic
 analysis over shares or calculate the value of derivatives [4]. Quantitative finance techniques express
@@ -41,7 +43,8 @@ algorithm, (4) provide little delay (lower than 10 minutes) in trading current a
 controlled using a programming language (such as Python, Java, or Scala). We evaluated several solutions
 decided to use the open source implementation of the Quantopian framework [zipline](github.com/quantopian/zipline).
 
-### Getting started with zipline
+##### Getting started with zipline
+
 Zipline is based on python and is able to run with python 2 and 3. Quantopian has created a [beginners tutorial](www.zipline.io/beginner-tutorial.html) on their website. Before going into the details of zipline, let us look into how to set it up locally. Note: I will be using python3 throughout this post.
 To install zipline you first need all the required C extensions. For Debian based distributions use the command shown below, otherwise there are some more details [provided here](www.zipline.io/install.html){:target="_blank"}.
 
@@ -51,7 +54,8 @@ sudo apt-get install libatlas-base-dev python-dev gfortran pkg-config libfreetyp
 
 I then created a virtual environment for Zipline. If you have never setup a virtualenv follow [this tutorial](http://docs.python-guide.org/en/latest/dev/virtualenvs/){:target="_blank"}. In case you want to use pyhton3 like me, make sure to use the ```python3``` executable. Also, when trying python2 I ran into a couple of issues as Linux Mint uses older versions of python2, which seem to be incompatible with the required version of numpy. When you setup your virtualenv, run ```pip install zipline``` from the terminal with your virtualenv . This will install all the required packages including numpy and most likely take some time.
 
-### The first investment algorithm
+##### The first investment algorithm
+
 In the ```/zipline/examples``` folder you will find some example algorithms to try out. In their beginners tutorial the zipline authors describe some of the algorithms, how they are generally structured and how to execute them. I will go into more detail about having a value investment algorithm and not take one of the example algorithms.
 
 The algorithm to be implemented is inspired by Benjamin Graham [6]
@@ -108,7 +112,8 @@ There is further analysis and discussion of the results in our [report](https://
 
 
 
-### References
+##### References
+
 1. D. Harper. (2016) Hedge funds hunt for upside, regardless of the market. [Online]. Available: http://www.investopedia.com/articles/03/112603.asp
 2. M. Agarwal, Hedge Fund Strategies. John Wiley & Sons, Inc., 2009, pp. 45–55. ISBN 9781118258187. [Online]. Available: http://dx.doi.org/10.1002/9781118258187.ch4
 3. Hedge Fund Research. (2016) HFR hedge fund strategy classification system. [Online]. Available: https://www.hedgefundresearch.com/hfr-hedge-fund-strategy-classification-system
