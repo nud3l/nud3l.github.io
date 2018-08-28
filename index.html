@@ -1,87 +1,19 @@
 ---
 layout: default
-title: Dominik Harz
+title: Blog
 ---
-		<!-- Main -->
-			<div id="main">
-				<!-- One -->
-					<section id="one">
-						<h2>Who am I</h2>
-						<p>
-							Imagine you have an autonomous car. Wouldn't it be great if your car could earn money
-							for you while you are not using it? The car could register itself in an app as a driver,
-							charge itself and pay for it, and get itself fixed at a garage, if needed. To enable these
-							capabilities the car needs to be able to communicate with these other entities,
-							agree on the terms of interaction, and have some measures to handle disputes or finding prices
-							for services or goods. This involves a great deal of open questions.
-						</br>
-							As of October 2017 I am Research Assistant at the 
-							<a href="http://www.imperial.ac.uk/cryptocurrency/">
-								Imperial Centre for Cryptocurrency Research and Engineering (IC3RE)
-							</a> where I try to answer a couple of these questions.
-							I am especially curious about verifiable computations,
-							secure multi-party computations, reputation management systems, and 
-							smart contract research.
-						</br>
-							Apart from my own research, I coordinate research projects together with IC3RE and
-							<a href="https://outlierventures.io">Outlier Ventures</a>. We are working together
-							with start-ups including <a href="http://fetch.ai">Fetch.AI</a>,
-							<a href="https://sovrin.org/">Sovrin</a>,
-							<a href="https://www.evernym.com">Evernym</a>
-							<a href="https://botanic.io">Botanic</a>, and 
-							<a href="https://oceanprotocol.com/">Ocean</a> to advance distributed ledger research
-							and technology.	The purpose is to combine distributed ledgers with other technologies 
-							such as machine learning, autonomous agents, IoT, and bots to expedite the next web.
-						</p>						
-						<ul class="actions">
-							<li>
-								<a href="resume.html" class="button">Learn more</a>
-							</li>
-							<li>
-								<a href="blog.html" class="button">Read blog</a>
-							</li>
-							<!-- <li><a href="bot-resume.html" class="button">Chat with resume</a></li> -->
-						</ul>
+{% for post in site.posts %}
+	<div class="docs-section">
+		<h6 class="docs-header">
+			<a href="{{ post.url }}">{{ post.subtitle }}</a>
+		</h6>
+		<p>
+			{{ post.content  | strip_html |truncatewords:75 }}
+		</p>
+		<p >
+			{{ post.date | date_to_long_string }}
+		</p>
 
-					</section>
+	</div>
+{% endfor %}
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent projects</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<img src="images/thumbs/blockchain.jpg" alt="" /></a>
-								<h3><a href="blockchain/2017/01/10/dinvest.html">dInvest: a social hedge fund in Ethereum</a></h3>
-								<p>Selecting a suitable financial investment, ethical and social criteria are becoming critical success factors. The core issue is finding a suitable framework for sustainable and profitable investment in combination with full transparency over the decision process and transactions. We are working on a proof-of-concept to realize profitable, transparent and socially responsible investment. </p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<img src="images/thumbs/street.jpg" alt="" /></a>
-								<h3><a href="ai/2017/01/12/breakingcaptcha.html">Breaking CAPTCHAs using deep learning</a></h3>
-								<p>The aim of the project is to break CAPTCHAs using deep learning technologies. Initially the focus lies on simple CAPTCHAs to evaluate the performance and move into more complex CAPTCHAs. The training dataset is generated from an open source CAPTCHA generation software. Tensorflow is used to create, train and test the network.</p>
-							</article>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three">
-						<h2>Get in touch</h2>
-						<p>Feel free to send me a message to
-						discuss about things like technology, blockchains, cyber-security, and AI.</p>
-						<div class="row">
-							<div class="8u 12u$(small)">
-								<form method="POST" action="https://formspree.io/hello.dominik42@gmail.com">
-									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="6u$ 12u$(xsmall)"><input type="email" name="_replyto" id="email" placeholder="Email" /></div>
-										<input type="hidden" name="_next" value="thanks.html" />
-										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-									<br />
-									<ul class="actions">
-										<li><input type="submit" value="Send" /></li>
-									</ul>
-								</form>
-							</div>
-						</div>
-					</section>
-			</div>
