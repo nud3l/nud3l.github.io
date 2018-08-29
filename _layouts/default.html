@@ -33,23 +33,26 @@
 
 	</head>
 	<body>
-
+		
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	
 		<!-- Header -->
 		{% include header.html %}
+		
 
-
+	<div class="container">
 		<!-- Navbar -->
 		{% include navbar.html %}
 
 		<!-- {{ site.url }}/Main -->
-		<div class="section container" id="content">
-			{{ content }}
-		</div>
+
+		{{ content }}
+
 
 		<!-- Footer -->
 		{% include footer.html %}
+	</div>
 
 	</body>
 </html>
