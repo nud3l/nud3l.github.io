@@ -8,7 +8,7 @@ authors: Dominik
 ---
 
 Contracts can be used to enforce agreements between entities.
-To this extent, smart contracts have been proposed by Nich Szabo and implemented for example in Bitcoin.
+To this extent, smart contracts have been proposed by Nick Szabo and implemented for example in Bitcoin.
 This article covers the basics of mechanism design of smart contracts in the context of Bitcoin.
 Mechanism design is concerned with creating or encoding preferences in an agreement.
 Hence, an author of a smart contract can create a mechanism that enforces certain behaviour of the agents (or humans) interacting with the contract.
