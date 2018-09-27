@@ -4,7 +4,9 @@ title: Publications
 ---
 
 ##### Publications
-[XCLAIM: Interoperability with Cryptocurrency-Backed Tokens](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind,Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, eprint, 2018.
+[Towards Safer Smart Contracts: A Survey of Languages and Verification Methods](https://arxiv.org/pdf/1809.09805.pdf), Dominik Harz, William J. Knottenbelt, pre-print, 2018.
+
+[XCLAIM: Interoperability with Cryptocurrency-Backed Tokens](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, pre-print, 2018.
 
 [The Scalability of Trustless Trust](https://arxiv.org/pdf/1801.09535.pdf), Dominik Harz, Magnus Boman, 2nd Workshop on Trusted Smart Contracts at Financial Cryptography 2018, 2018.
 
