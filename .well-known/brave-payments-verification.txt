@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: dominikharz.me
+Token: 74403f56d9bb4c4e5f44ba7513e84edac9c1c0708be6d9881e2cde37cbea163c
