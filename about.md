@@ -20,5 +20,6 @@ Apart from my own research, I coordinate research projects together with IC3RE a
 with companies including [Fetch](http://fetch.ai){:target="_blank"},
 [Sovrin](https://sovrin.org/){:target="_blank"}, [SEED](https://www.seedtoken.io/){:target="_blank"}, [Haja](https://haja.io/){:target="_blank"}, and 
 [Ocean](https://oceanprotocol.com/){:target="_blank"} to advance distributed ledger research and technology. The purpose is to combine distributed ledgers with other technologies such as machine learning, autonomous agents, IoT, and bots to expedite the next web.
-For this, we are offering a range of projects that students at Imperial can work on.
-If you are a student at Imperial and feel like you want to work on those, please reach out to me via my Imperial e-mail address.
+For this, we are offering a range of projects that students can work on.
+If you are a student and feel like you want to work on those, please reach out to me via my Imperial e-mail address, Twitter, LinkedIn, or the contact form.
+I am also open to collaborations around smart contracts, formal verification, and blockchains.
