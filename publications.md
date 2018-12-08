@@ -15,6 +15,8 @@ title: Publications
 [Trust and verifiable computation for smart contracts in permissionless blockchains](http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1111933&dswid=-143), Dominik Harz, MSc thesis project, KTH Stockholm, 2017.
 
 ##### Talks
+[DAGsim: Simulation of DAG-based distributed ledger protocols](https://docs.google.com/presentation/d/1r0wDaRbqiC19sZjN9gmpILmcgw8d8M_Agqu0tO_onoc/edit?usp=sharing) Tom Waite and Dominik Harz, 1st Symposium on Cryptocurrency Analysis (workshop at PERFORMANCE 2018), Toulouse, 2018.
+
 [The Convergence Thesis: Collaboration between Outlier Ventures and Imperial College London](https://drive.google.com/file/d/1wDEobtI9SXuRCPS_e47rF70DrqBqhhIE/view?usp=sharing), Lawrence Lundy-Bryan and Dominik Harz, Imperial Blockchain Forum, London, 2018.
 
 [Issue, Trade, Redeem: Interoperability with Tokens](https://youtu.be/FI9cwksTrQs?t=6429), Alexei Zamyatin and Dominik Harz, Scaling Bitcoin 'Kaizen', Tokyo, 2018.
