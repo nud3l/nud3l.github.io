@@ -13,13 +13,13 @@ title: About
 </div>
 </p>
 
-As of October 2017 I am Research Assistant at the [Imperial Centre for Cryptocurrency Research and Engineering (IC3RE)]("http://www.imperial.ac.uk/cryptocurrency/"){:target="_blank"} where I try to answer a couple of these questions. I am especially curious about smart contracts and their verification as well as automated negotiation for autonomous agents. Additionally, I am interested in general distributed and decentralised web research including problems revolving around security and privacy, interoperability of distributed ledgers, and scaling issues with DAG-based solutions.
+As of October 2017 I am Research Assistant at the [Imperial Centre for Cryptocurrency Research and Engineering (IC3RE)]("http://www.imperial.ac.uk/cryptocurrency/"){:target="_blank"} where I try to answer a couple of these questions. I am especially curious about smart contracts and their verification as well as automated negotiation for autonomous agents. Additionally, I am interested in general distributed and decentralised web research including problems revolving around interoperability of distributed ledgers and privacy-preserving applications.
 
-Apart from my own research, I coordinate research projects together with IC3RE and
+Apart from my own research, I coordinate research projects together with [IC3RE]("http://www.imperial.ac.uk/cryptocurrency/"){:target="_blank"} and
 [Outlier Ventures](https://outlierventures.io){:target="blank"}. We are working together
 with companies including [Fetch](http://fetch.ai){:target="_blank"},
 [Sovrin](https://sovrin.org/){:target="_blank"}, [SEED](https://www.seedtoken.io/){:target="_blank"}, [Haja](https://haja.io/){:target="_blank"}, and 
 [Ocean](https://oceanprotocol.com/){:target="_blank"} to advance distributed ledger research and technology. The purpose is to combine distributed ledgers with other technologies such as machine learning, autonomous agents, IoT, and bots to expedite the next web.
-For this, we are offering a range of projects that students can work on.
-If you are a student and feel like you want to work on those, please reach out to me via my Imperial e-mail address, Twitter, LinkedIn, or the contact form.
-I am also open to collaborations around smart contracts, formal verification, and blockchains.
+
+I occasionally write [blog posts](blog.html) about my projects, smart contract development, and general distributed ledgers. On this website, you will also find an overview of current and past [projects](projects.html) as well as my [publications and talks](publications.html).
+
