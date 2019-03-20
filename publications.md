@@ -3,13 +3,13 @@ layout: page
 title: Publications
 ---
 <h5 class="docs-header">Publications</h5>
+[XCLAIM:  Trustless, Interoperable Cryptocurrency-Backed Assets](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, Proceedings of the IEEE Symposium on Security & Privacy, May 2019, 2019.
+
 [DAGsim: Simulation of DAG-based distributed ledger protocols](https://eprint.iacr.org/2018/1062.pdf), Manuel Zander, Tom Waite, Dominik Harz, 1st Symposium on Cryptocurrency Analysis (workshop at PERFORMANCE 2018), 2018.
 
 [Towards Safer Smart Contracts: A Survey of Languages and Verification Methods](https://arxiv.org/pdf/1809.09805.pdf), Dominik Harz, William J. Knottenbelt, pre-print, 2018.
 
-[XCLAIM: Interoperability with Cryptocurrency-Backed Tokens](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, pre-print, 2018.
-
-[The Scalability of Trustless Trust](https://arxiv.org/pdf/1801.09535.pdf), Dominik Harz, Magnus Boman, 2nd Workshop on Trusted Smart Contracts at Financial Cryptography 2018, 2018.
+[The Scalability of Trustless Trust](https://arxiv.org/pdf/1801.09535.pdf), Dominik Harz, Magnus Boman, 2nd Workshop on Trusted Smart Contracts at Financial Cryptography and Data Security 2018, 2018.
 
 [Trust and verifiable computation for smart contracts in permissionless blockchains](http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1111933&dswid=-143), Dominik Harz, MSc thesis project, KTH Stockholm, 2017.
 
