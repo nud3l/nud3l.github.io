@@ -4,6 +4,8 @@ title: Publications
 ---
 <h5 class="docs-header">Publications</h5>
 
+[Refinement and Verification of CBC Casper](https://eprint.iacr.org/2019/415), Ryuya Nakamura, Takayuki Jimba, Dominik Harz, 2019 Crypto Valley Conference on Blockchain Technology (CVCBT), 2019.
+
 [XCLAIM:  Trustless, Interoperable Cryptocurrency-Backed Assets](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, Proceedings of the IEEE Symposium on Security & Privacy, May 2019, 2019.
 
 [DAGsim: Simulation of DAG-based distributed ledger protocols](https://eprint.iacr.org/2018/1062.pdf), Manuel Zander, Tom Waite, Dominik Harz, 1st Symposium on Cryptocurrency Analysis (workshop at PERFORMANCE 2018), 2018.
