@@ -26,12 +26,6 @@ title: Projects
         Past Projects
     </h5>
     <h6>
-        <a href="https://medium.com/@apfelbeck.florian/secure-multiparty-computation-enabling-privacy-preserving-machine-learning-ffef396b8ca2" target="_blank">Privacy-preserving machine learning</a> 
-    </h6>
-    <p>
-        I had the pleasure to supervise <a href="https://www.linkedin.com/in/florian-apfelbeck-00139674" target="_blank">Florian Apfelbeck's</a> master thesis project to develop a privacy-preserving machine learning project. In this project, a Multi-Party Computation (MPC) protocol was used to realise a linear regression and a shallow neural network implementation without reveling input data of the participants in the protocol. 
-    </p>
-    <h6>
         <a href="{{ site.url }}/blockchain/2017/01/10/dinvest.html">dInvest: a social hedge fund in Ethereum</a> 
     </h6>
     <p>
