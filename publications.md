@@ -4,6 +4,8 @@ title: Publications
 ---
 <h5 class="docs-header">Publications</h5>
 
+[Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://eprint.iacr.org/2019/675.pdf), Dominik Harz, Lewis Gudgeon, Arthur Gervais, William J. Knottenbelt, pre-print. 2019.
+
 [Refinement and Verification of CBC Casper](https://eprint.iacr.org/2019/415), Ryuya Nakamura, Takayuki Jimba, Dominik Harz, 2019 Crypto Valley Conference on Blockchain Technology (CVCBT), 2019.
 
 [XCLAIM:  Trustless, Interoperable Cryptocurrency-Backed Assets](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, Proceedings of the IEEE Symposium on Security & Privacy, May 2019, 2019.
