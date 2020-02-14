@@ -22,6 +22,8 @@ title: Publications
 
 <h5 class="docs-header">Talks</h5>
 
+[Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://acm-prod-cdn.literatumonline.com/3319535.3354221/999193a4-ee1f-4ad6-ad5a-fb6341611056/p1485-harz.webm?b92b4ad1b4f274c70877518315abb28be831d54738a81f1de54388f7ee04e6eaf7da3e45f6638c5b4bc8bfec8b78561cb00a22bd77ee8e970cd29dfc1303c3cbce70a5960b06a2fb217fe6cc03f3a29fd3534ed7f44ef47f7efaba2d6834fd4711319b38b3), Dominik Harz, ACM CCS, London, 2019.
+
 [XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://docs.google.com/presentation/d/1RMJ5J_TQOHlPZtaMbStgX_hVAi1kL6-YpUBUpk9dhOc/edit?usp=sharing), Dominik Harz, UNSW Workshop on Protocols and Proofs for Blockchain Systems, Sydney, 2019. 
 
 [Interoperability between Bitcoin and Ethereum - Trustless](https://docs.google.com/presentation/d/1f3qdnmD82ZoCcWrFmKh3jPMzu5qm4UJud3zsmGSNM5E/edit?usp=sharing), Dominik Harz, [Ethereum Development Conference (EDCON)](https://www.edcon.io/), Sydney, 2019.
