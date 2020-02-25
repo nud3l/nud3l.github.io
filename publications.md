@@ -24,7 +24,7 @@ title: Publications
 
 <h1 class="docs-header">Talks</h1>
 
-[Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://youtu.be/UenvElbjwJc), Dominik Harz, ACM CCS, London, 2019.
+[Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://youtu.be/TkVP7eOTxes), Dominik Harz, ACM CCS, London, 2019.
 
 [XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://docs.google.com/presentation/d/1RMJ5J_TQOHlPZtaMbStgX_hVAi1kL6-YpUBUpk9dhOc/edit?usp=sharing), Dominik Harz, UNSW Workshop on Protocols and Proofs for Blockchain Systems, Sydney, 2019. 
 
