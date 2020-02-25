@@ -28,7 +28,7 @@ with companies including [Fetch](http://fetch.ai){:target="_blank"},
 [Sovrin](https://sovrin.org/){:target="_blank"}, [SEED](https://www.seedtoken.io/){:target="_blank"}, [Haja](https://haja.io/){:target="_blank"}, and 
 [Ocean](https://oceanprotocol.com/){:target="_blank"} to advance distributed ledger research and technology.
  <!-- The purpose is to combine distributed ledgers with other technologies such as machine learning, autonomous agents, IoT, and bots to expedite the next web. -->
-
+ 
 ## News
 
 - *Feb 2020*: [Interlay](https://www.interlay.io/){:target="_blank"} officially announced! 
