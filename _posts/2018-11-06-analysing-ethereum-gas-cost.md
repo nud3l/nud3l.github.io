@@ -9,7 +9,7 @@ authors: Dominik
 
 Updating the state of a smart contract in Ethereum costs money. In this post I will go a bit into detail why this is necessary in Ethereum and how to check easily (with `truffle test`) your gas costs during local development. For this we will use a little pet example, you can use for your own deployments.
 
-##### Gas cost - why?
+## Gas cost - why?
 Ethereum smart contracts are deployed at an address in the Ethereum network. They are identifiable by the fact that the `code` field in the address is occupied by the EVM bytecode. One example is the Maker [Dai contract](https://etherscan.io/address/0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359#code). Any contract in Ethereum is deployed that way and implements a range of functions that can update its own state and the state of the blockchain.
 
 The own state is defined within the contract and refers to any contract wide variables you define like `uint`, `mapping`, or `string`. The global state of the network is affected when you make a transaction to a contract, which, if everything goes right, will include one more transaction in the ever-growing list of transactions.
@@ -18,10 +18,10 @@ Everytime somebody invokes a state update (i.e. sends a transaction), the networ
 
 Moreover, assume that any of these operations are free. One could simply create a function that runs indefinitely to block all nodes verifying the network. This is the equivalent to a distributed denial-of-service attack. It would be nice if we would know in advance if a function terminates. However, the [Halting problem](https://en.wikipedia.org/wiki/Halting_problem) prevents us from knowing this. Hence, we have to charge partial function execution and forcefully terminate execution when it becomes to burdensome for the network.
 
-##### Practical implications
+## Practical implications
 Operations executed by the EVM cost gas depending how "heavy" they are on the network. Gas is a way of determining the cost for an operation. The current gas price on the other hand determines how much 1 gas costs in Ether. That way, the gas cost can be adjusted depending on the network load. For example, while the gas cost for a single operation is constant, the gas price can go up when the network is congested. An overview [of the gas costs are found in appendix G of the yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf).
 
-##### Local execution and global execution
+## Local execution and global execution
 Any operation on a smart contract costs gas. It is important to note a difference though. **Calls** are only executed locally. So for example the function below measures its gas, but the you will not be charged executing such a function as it is a read-only function.
 
 ```
@@ -43,7 +43,7 @@ function _transfer(address from, address to, uint256 value) internal {
 }
 ```
 
-##### Measuring gas costs
+## Measuring gas costs
 I will assume here that you are familiar with [Truffle](https://truffleframework.com/docs) and [Ganache](https://truffleframework.com/docs/ganache/overview). When you develop your new great smart contracts, I like to create end-to-end tests that also check for gas costs.
 
 Assuming your project folder looks something like this:

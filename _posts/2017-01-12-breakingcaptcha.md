@@ -15,7 +15,7 @@ There are several use cases for CAPTCHAs, which includes the ones presented in [
 
 CAPTCHAs do not give a guarantee that it prevents these cases every time as there are known attack vectors. These include cheap or unwitting human labor, insecure implementation, and machine learning based attacks. We will not go into detail on insecure implementations, as the focus of this article are deep learning based approaches.
 
-##### Human based CAPTCHA breaking
+## Human based CAPTCHA breaking
 
 Out of curiosity and to compare results achieved by machine learning approaches, we take a look at the human based approach. For example [BypassCAPTCHA](http://bypassCAPTCHA.com/order1.php) offers breaking CAPTCHAs with cheap human labor in packages (e.g. 20,000 CAPTCHAs for 130$). There are also other services including [Image Typerz](http://www.imagetyperz.com/Forms/bypassCAPTCHA.aspx), [ExpertDecoders](http://expertdecoders.com/), and [9kw.eu](https://www.9kw.eu/). There are also hybrid solutions that use both OCR and human labor like [DeathByCAPTCHA](http://deathbyCAPTCHA.com/user/login). These vendors list the following accuracies and response times (averages):
 
@@ -31,7 +31,7 @@ Out of curiosity and to compare results achieved by machine learning approaches,
 The values are advertised and self-reported. We did not conduct any verification of the stated numbers, but it can give an orientation on human performance and serves as a reference for our machine learning algorithms.
 
 
-##### Learning based CAPTCHA breaking
+## Learning based CAPTCHA breaking
 
 CAPTCHAs are based on unsolved or hard AI problems. However, with the progress of AI techniques and computing power, sequences of characters or CAPTCHAs can be recognized as shown by Goodfellow et al. in [1], Hong et al. in [2], Bursztein et al. in [3] and [7], and Stark et al. in [4] using deep learning techniques. Goodfellow et al. predict numbers from Goolge Street View images directly (without pre-processing) utilizing a CNN. They make use of  [DistBelief](https://research.google.com/pubs/pub40565.html) by Dean et al. to scale the learning to multiple computers and to avoid out of memory issues [1]. This technique was later on used to solve CAPTCHAs, whereby the researched achieved an [accuracy of up to 99.8%](http://www.zdnet.com/article/google-algorithm-busts-CAPTCHA-with-99-8-percent-accuracy/). Hong et al. pre-process CAPTCHAs to rotate them and segment the characters. Afterwards they apply a CNN with three convolutional layers and two fully connected layers [2]. Bursztein et al. use pre-processing, segmentation, and recognition techniques (based on KNN) and later on various CNNs to detect CAPTCHAs from multiple websites including Baidu, Wikipedia, reCAPTCHA, and Yahoo [3],[7]. Stark et al. researched a way of detecting CAPTCHAs with limited testing data. They use a technique called Active Learning to feed the network with new training data, where the added data has a high classification uncertainty, to improve the performance overall [4]. The below table gives an overview of the reported accuracies in the different papers and blog posts.
 
@@ -44,7 +44,7 @@ CAPTCHAs are based on unsolved or hard AI problems. However, with the progress o
 | Bursztein | Simple CAPTCHA | CNN | 92% | [3] |
 | Bursztein | Simple CAPTCHA | RNN | 96% | [8] |
 
-##### Current state of CAPTCHAs
+## Current state of CAPTCHAs
 
 <div class="row"> 
   <div class="one-half column">
@@ -61,11 +61,11 @@ Google has introduced [NoCAPTCHA](https://www.google.com/reCAPTCHA/intro/index.h
 
 The previous version of [reCAPTCHA](https://security.googleblog.com/2014/12/are-you-robot-introducing-no-CAPTCHA.html) was very popular on many websites. It included typically two words with rotation and had an audio option. Further CAPTCHA techniques can include simple logic or math questions, image recognition, recognition of friends (social CAPTCHA), or user interaction (like playing a game) [9].
 
-##### Our objectives and motivation
+## Our objectives and motivation
 
 The aim of the project is to break CAPTCHAs using deep learning technologies without pre-segmentation. Initially we focus on simple CAPTCHAs to evaluate the performance and move into more complex CAPTCHAs. The training dataset is generated from an open source CAPTCHA generation software. Tensorflow is used to create and train a neural network.
 
-##### Creating the datasets
+## Creating the datasets
 
 We are generating the datasets using a Java based CAPTCHA generator ([SimpleCAPTCHA](http://simpleCAPTCHA.sourceforge.net/)). We have created the following datasets.
 
@@ -86,7 +86,7 @@ We have extended SimpleCAPTCHA library in order to get character rotation, outli
 
 Generated CAPTCHAs will be 152x80 greyscale images. This resolution is chosen because it is small enough to reduce memory footprint when training the CNN and it is also enough to recognize the CAPTCHA easily.
 
-##### Deep CNN model
+## Deep CNN model
 
 Based on the research in [1], [3] and [4] we use a deep CNN with three ReLU layers and two fully connected layers to solve the CAPTCHAs.
 Each digit is represented by 36 neurons in the output layer.
@@ -98,7 +98,7 @@ In the output layer, digits 0-9 will be represented by 1 to 10 neurons and, char
 
 <img class="u-max-full-width" src="{{ site.url }}/images/blog/captcha/cnn.png">
 
-##### Results and discussion
+## Results and discussion
 
 First, we trained the CNN with 10000 five letter and digit CAPTCHAs without rotation on a GTX660M. We had 100 batches with a batch size of 100 and ran it for 20 epochs. The hyperparameters were set as described in the previous section. The figure below shows that the network did not perform well with these settings. We then increased the training size to 50000 CAPTCHAs, but the results stayed the same. We then tried with 10000 simplified CAPTCHAs with only five digits without rotation. However, this still did not improve our situation. We noted that the loss function reduced quite quickly and stayed constant. We hence introduced another convolutional layer to the network to allow it to further differentiate the digits. Again, this resulted in almost the same result.
 
@@ -138,7 +138,7 @@ From the tests conducted above, we have a few examples to show correct and false
 </div>
 
 
-##### Conclusion
+## Conclusion
 
 With this project we have shown that it is possible to create large enough datasets automatically to mimic certain CAPTCHAs (i.e. Microsoft). This provides large labeled datasets, which serve as a foundation to train neural networks. We have chosen to use two different CNNs with three and four convolutional layer and two fully connected layers. Our experiments show however, that adding more layers to the network did not increase the accuracy.
 We noticed that optimizing a CNN can be cumbersome. While running the CNN on a GTX 660M, we were not able to manage to get satisfying results. Most likely we would have needed more training time on the batches to receive better results. When we switched to a Tesla K80 we managed to train the network with larger amounts of data and a higher batch size. This resulted in higher accuracy on the simple and more complex datasets. We realized that memory poses a quite severe limitation towards applying large scale machine learning.
@@ -146,7 +146,7 @@ Our approach based on a CNN is limited to CAPTCHAs with exactly the length defin
 Moreover, using a CNN requires large datasets to be trained on. For a combination of digits, characters, and rotation we required a dataset of around 200000 CAPTCHAs (~780MB). On small sized GPU this datasets cause either out of memory errors or require a quite long training time. Even with the Tesla K80 the training time takes around 2 hours and 30 minutes.
 
 
-##### References
+## References
 
 1. Goodfellow, Ian J., et al. "Multi-digit number recognition from street view imagery using deep convolutional neural networks." arXiv preprint arXiv:1312.6082 (2013).
 2. Hong, Colin et al. "Breaking Microsoft’s CAPTCHA." (2015).

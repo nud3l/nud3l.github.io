@@ -21,7 +21,7 @@ Bitcoin in combination with payment channels secure the payments and allow for m
 Thus, one has to design protocols integrating with these existing technologies to achieve for example secure decentralised data exchanges.
 
 
-##### Bitcoin and smart contracts
+## Bitcoin and smart contracts
 
 Nakamoto introduced Bitcoin as a way to send money between peers without trusted third parties \[2\].
 In Nakamoto consensus the heaviest chain is considered having correct transactions as most miners have contributed to this specific chain by solving a proof of work (PoW) puzzle.
@@ -32,7 +32,7 @@ A smart contract is a piece of software which formalises a relationship between 
 However, the idea is to use secure computer protocols and include game theoretic elements to cover aspects that cannot be adequately verified in the protocol.
 Szabo argues that smart contracts cover interactions including search, negotiation, commitment, performance, and adjudication.
 
-##### Rational agents
+## Rational agents
 
 Agents in decentralised systems are self-interested \[5\].
 Hence, protocols facilitating (economic) interactions between agents need to account for autonomous agents to behave rationally.
@@ -42,7 +42,7 @@ Agents can apply multiple strategies $s \in S$ within a negotiation \[1\].
 We have to assume that agents will execute actions $\theta \in \Theta$ based on $s$ that optimises their utility including cheating, lying, breaking contracts, and hiding their intentions.
 However, we also assume that agents that interact can find an outcome $\omega \in \Omega$ that increases or optimises $u_i$.
 
-##### Mechanism design
+## Mechanism design
 
 Mechanism design is used to encode preferences in an agreement.
 Essentially, a "designer" defines a preferred social choice which, under the assumption of rational agents, the mechanism is intended to favour \[6\].
@@ -57,7 +57,7 @@ Loosely speaking incentive compatibility of a mechanism occurs when the utility 
 In games without money, non-trivial choices (e.g. more than two contracts, multiple potential agents, multiple different terms) lead either to incentive incompatibility, or the social choice function is a dictatorship according to the Gibbard--Satterthwaite theorem.
 However, in Bitcoin, we can construct games with money.
 
-##### Games in Bitcoin
+## Games in Bitcoin
 
 In games with money, a Vickery-Clarke-Groves (VCG) mechanism maximises social welfare.
 A VCG mechanism is incentive compatible. Hence an agent strives to implement a contract as such a mechanism.
@@ -88,7 +88,7 @@ Yet, this would only hold for the case where two agents compete for obtaining a 
 In more complex cases, for example, adding the quality of the data, we need to apply a more complex social choice function.
 In these cases, variations of VCG are the only incentive compatible mechanisms \[6\].
 
-##### Assumptions
+## Assumptions
 
 Using the resource exchange formalisation described in \[1\] the following tuple defines the exchange setting:
 
@@ -104,7 +104,7 @@ This valuation expresses the price an agent is willing to exchange the resource 
 In this simple case, we assume that the agents follow the negotiation protocol truthfully and that their utility $U$ increases when making a deal and exchanging the resource.
 We further assume that the agents have a way to enter such an agreement, i.e. one of them can prepare a contract that the other one can interpret and willing to commit to.
 
-##### Contract
+## Contract
 
 The contract $C$ is implemented as an Hashed Timelock Contract (HTLC) \[8\] with multiple transactions in the Lightning Network. Note that $A$ sells data $z$, and $B$ buys it for the agreed price $p$ in Satoshi. To allow agents to exchange $z$ and atomic swap is used. This protocol has been described for cross-chain transactions but is equally useful within a single chain \[9\].
 
@@ -120,7 +120,7 @@ Hence, the protocol could be extended using GPG or other asymmetric encryption s
 In that case, $A$ could take $B$'s public RSA key to encrypt $z$ and then store it on IPFS.
 This would allow private trading of the file.
 
-##### Mechanism analysis
+## Mechanism analysis
 
 **Players:** $A$ and $B$ are the only players in the game. They have the same capabilities and pre-contract the same norms. Post-contract one agent has the obligation to pay for $z$ and the other has an obligation to provide $z$. The contract is *atomic*. Hence, payment and delivery occur at the same time. However, there is a possible weakness in the contract. If $A$ reveals $H(z)$ without having the file stored on IPFS any more, $B$ will not be able to retrieve the file.
 
@@ -138,7 +138,7 @@ $A$ will only consider revealing $H(z)$ in the proposed HTLC if $p \geq v_A(z)$.
 
 **Social choice:** Since $B$ proposes the contract, $B$ can set the social choice function. In this case, a single parameter domain is useful. The utility analysis shows that $p$ has the condition $v_A(z) \leq p \leq v_B(z)$. Since $B$ is not able to be sure that $z$ is available, $p$ will be low in the first tries as $B$ tries to manage his risk exposure. However, $B$ could argue that $A$ might be interested in future trades and include this as part of his utility function as an expected value. Hence, $B$ would only propose a contract if $p << v_B(z)$ since otherwise the risk is too high.
 
-##### References
+## References
 
 \[1\] S. Fatima, S. Kraus, and M. Wooldridge, *Principles of Automated Negotiation*. Cambridge: Cambridge University Press, 2014 \[Online\]. Available: <http://ebooks.cambridge.org/ref/id/CBO9780511751691>
 

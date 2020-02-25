@@ -2,7 +2,9 @@
 layout: page
 title: Publications
 ---
-<h5 class="docs-header">Publications</h5>
+<h1 class="docs-header">Publications</h1>
+
+[The Decentralized Financial Crisis: Attacking DeFi](https://arxiv.org/abs/2002.08099), Lewis Gudgeon, Daniel Perez, Dominik Harz, Arthur Gervais, Benjamin Livshits, pre-print, 2020. 
 
 [Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://eprint.iacr.org/2019/675.pdf), Dominik Harz, Lewis Gudgeon, Arthur Gervais, William J. Knottenbelt, Proceedings of the 2019 ACM SIGSAC Conference on Computer & Communications Security (CCS '19), 2019.
 
@@ -20,9 +22,9 @@ title: Publications
 
 [Trust and verifiable computation for smart contracts in permissionless blockchains](http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1111933&dswid=-143), Dominik Harz, MSc thesis project, KTH Stockholm, 2017.
 
-<h5 class="docs-header">Talks</h5>
+<h1 class="docs-header">Talks</h1>
 
-[Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://acm-prod-cdn.literatumonline.com/3319535.3354221/999193a4-ee1f-4ad6-ad5a-fb6341611056/p1485-harz.webm?b92b4ad1b4f274c70877518315abb28be831d54738a81f1de54388f7ee04e6eaf7da3e45f6638c5b4bc8bfec8b78561cb00a22bd77ee8e970cd29dfc1303c3cbce70a5960b06a2fb217fe6cc03f3a29fd3534ed7f44ef47f7efaba2d6834fd4711319b38b3), Dominik Harz, ACM CCS, London, 2019.
+[Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://youtu.be/UenvElbjwJc), Dominik Harz, ACM CCS, London, 2019.
 
 [XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://docs.google.com/presentation/d/1RMJ5J_TQOHlPZtaMbStgX_hVAi1kL6-YpUBUpk9dhOc/edit?usp=sharing), Dominik Harz, UNSW Workshop on Protocols and Proofs for Blockchain Systems, Sydney, 2019. 
 
@@ -39,5 +41,3 @@ title: Publications
 [Lightning Talk EFPL SuRI 2018](https://drive.google.com/open?id=1jE1DmvnGayAkPnabQwBkojBhtgSpI0m3V866iidhgdo), Dominik Harz, Summer Research Institute at EFPL, Lightning Talk, Lausanne, 2018.
 
 [Introduction to Smart Contracts](https://drive.google.com/open?id=1LVlVB3S4jlurZr0KzZZyi5CI-yqMRKKmj0fK026ncp0), Dominik Harz, CodeBlock @ blockchain.info, London, 2018.
-
-[Blockchain and beyond](https://drive.google.com/open?id=1MJlvGJ9jY97VdY1CkycI5gKDlHA-49INKNBcC53wxuU), Dominik Harz, Workshop on Blockchain Use Cases at Versicherungskammer Bayern, Munich, 2018.
