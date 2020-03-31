@@ -24,8 +24,9 @@ Apart from my own research, I lead the [Outlier Ventures](https://outlierventure
 
 ## News
 
-- *Feb 2020*: [Interlay](https://www.interlay.io/){:target="_blank"} officially announced! 
-- *Feb 2020*: New attack vectors on decentralized governance with flash loans: [Stealing All of Maker’s Collateral](https://medium.com/@dominik.harz/stealing-all-of-makers-collateral-f940970605b1){:target="_blank"}
+- **Mar 2020**: We open-sourced our [BTC-Relay implementation](https://gitlab.com/interlay/btc-parachain) in Substrate.
+- **Feb 2020**: [Interlay](https://www.interlay.io/){:target="_blank"} officially announced! 
+- **Feb 2020**: New attack vectors on decentralized governance with flash loans: [Stealing All of Maker’s Collateral](https://medium.com/@dominik.harz/stealing-all-of-makers-collateral-f940970605b1){:target="_blank"}
 
 <!-- 
 I occasionally write [blog posts](blog.html) about my projects, smart contract development, and general distributed ledgers. On this website, you will also find an overview of current and past [projects](projects.html) as well as my [publications and talks](publications.html). -->
