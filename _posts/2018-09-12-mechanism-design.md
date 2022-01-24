@@ -3,8 +3,8 @@ layout: mathpost
 title:  "Analysing Bitcoin smart contracts from a mechanism design perspective"
 subtitle: "Analysing Bitcoin smart contracts from a mechanism design perspective"
 date:   2018-09-12
-categories: blockchain
-authors: Dominik
+categories: blockchain, DeFi
+authors: Dom
 ---
 
 Contracts can be used to enforce agreements between entities.

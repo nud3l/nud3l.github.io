@@ -4,7 +4,7 @@ title:  "Integrating Python and Ethereum"
 subtitle: "Interact with Ethereum contracts from python with web3py"
 date:   2017-02-14
 categories: blockchain
-authors: Dominik
+authors: Dom
 ---
 In Ethereum and other blockchains there are still a lot of proof of concept implementation and developers trying out how to cope with the new concepts. As part of the dInvest [dInvest post series]({% post_url 2017-01-10-dinvest %}) I was also looking into Ethereum and trying to implement a hedge fund in a blockchain. In a previous post I discussed how to get a quantitative framework in python up and running. In this post I will write how to integrate python programs with Ethereum smart contracts. For one reason or another you might be also faced with the issue, that although Ethereum offers a Turing-complete language not everything is actually doable there.
 

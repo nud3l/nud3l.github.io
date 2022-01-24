@@ -4,7 +4,7 @@ title:  "Quantitative finance with zipline"
 subtitle: "Building a value investment algorithm with zipline"
 date:   2017-02-10
 categories: quant
-authors: Dominik
+authors: Dom
 ---
 As stated in the [dInvest post series]({% post_url 2017-01-10-dinvest %}) the idea is to build a hedge fund in a blockchain. Due to computational limitations, it is not feasible to implement investment agents in the blockchain. In dInvest an investment agent should do the following: (1) Get a list of all available financial assets to trade; (2) based on the data given (i.e. financial data and fundamentals data) make a recommendation which assets to buy; (3) keep track of which assets the agent is currently holding; and (4) send the recommended assets to buy to the blockchain. In this blog post I will cover the first three tasks. But what does a hedge fund actually do and how do financial investment strategies look like? I had taken some courses in my undergrad on international finance, but as a computer scientist I had to learn some new concepts while doing this project.
 

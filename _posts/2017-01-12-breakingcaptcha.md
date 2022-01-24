@@ -4,7 +4,7 @@ title:  "Breaking captchas"
 subtitle: "Using deep learning to automatically break CAPTCHAs"
 date:   2017-01-12
 categories: ai
-authors: Tharidu, Akash and Dominik
+authors: Tharidu, Akash and Dom
 ---
 Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) is a way of differentiating humans and machines and was coined by von Ahn, Blum, Hopper, and Langford [5]. The core idea is that reading distorted letters, numbers, or images is achievable for a human but very hard or impossible for a computer. CAPTCHAs might look like the one below. Most likely the reader has already seen one, when trying to register at a website or write a comment online.
 

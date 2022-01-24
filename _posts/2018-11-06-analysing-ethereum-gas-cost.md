@@ -4,7 +4,7 @@ title:  "Analysing Ethereum contract gas costs during development"
 subtitle: "Analysing Ethereum contract gas costs during development"
 date:   2018-11-06
 categories: blockchain
-authors: Dominik
+authors: Dom
 ---
 
 Updating the state of a smart contract in Ethereum costs money. In this post I will go a bit into detail why this is necessary in Ethereum and how to check easily (with `truffle test`) your gas costs during local development. For this we will use a little pet example, you can use for your own deployments.
