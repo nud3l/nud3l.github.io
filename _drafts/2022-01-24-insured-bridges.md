@@ -7,7 +7,7 @@ categories: blockchain, DeFi
 authors: Dom
 ---
 
-The future is multi-chain. The DeFi demand has outgrown Ethereum as transaction prices force users to try alternatives including other L1 and L2 solutions.
+The future is multi-chain. DeFi demand has outgrown Ethereum as transaction prices force users to try alternatives including other L1 and L2 solutions.
 The core infrastructure piece connecting these systems are bridges.
 Bridges allow users to move assets between systems seamlessly and I predict that once they work as they should, users will not care about the bridges any longer but take them as guaranteed piece of infrastructure.
 But we are quite early in the game and in this post I want to outline *insured bridges*.
@@ -21,6 +21,8 @@ But we are quite early in the game and in this post I want to outline *insured b
 
 
 ## Bridged Bitcoin
+
+
 
 ## Insurance Types a.k.a. Collateral
 
