@@ -3,7 +3,7 @@ layout: post
 title: "Lean Execution"
 subtitle: "Lean Execution: How to Stay Focused"
 date: 2022-02-21
-categories: agile, work
+categories: agile
 authors: Dom
 ---
 
