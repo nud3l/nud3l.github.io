@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Asynchronous DeFi"
+title: "Bridged Flash Loans"
 subtitle: ""
 date: 2022-01-24
 categories: blockchain, DeFi
