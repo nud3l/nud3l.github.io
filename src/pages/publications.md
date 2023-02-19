@@ -1,14 +1,10 @@
----
-layout: page
-title: Publications
----
-<h1 class="docs-header">Publications</h1>
+# Publications
 
 [The Decentralized Financial Crisis: Attacking DeFi](https://arxiv.org/abs/2002.08099), Lewis Gudgeon, Daniel Perez, Dominik Harz, Arthur Gervais, Benjamin Livshits, pre-print, 2020. 
 
 [Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://eprint.iacr.org/2019/675.pdf), Dominik Harz, Lewis Gudgeon, Arthur Gervais, William J. Knottenbelt, Proceedings of the 2019 ACM SIGSAC Conference on Computer & Communications Security (CCS '19), 2019.
 
-[Poster: Random Rewards in Proof-of-Stake Protocols]({{ site.url }}/publications/random-rewards/poster.pdf), Dominik Harz, Ryuya Nakamura, International Workshop on Security (IWSEC), Tokyo, 2019.
+[Poster: Random Rewards in Proof-of-Stake Protocols](random-rewards/poster.pdf), Dominik Harz, Ryuya Nakamura, International Workshop on Security (IWSEC), Tokyo, 2019.
 
 [XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, Proceedings of the IEEE Symposium on Security & Privacy, May 2019, 2019.
 
@@ -26,7 +22,7 @@ title: Publications
 
 [Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://youtu.be/TkVP7eOTxes), Dominik Harz, ACM CCS, London, 2019.
 
-[XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://docs.google.com/presentation/d/1RMJ5J_TQOHlPZtaMbStgX_hVAi1kL6-YpUBUpk9dhOc/edit?usp=sharing), Dominik Harz, UNSW Workshop on Protocols and Proofs for Blockchain Systems, Sydney, 2019. 
+[XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://docs.google.com/presentation/d/1RMJ5J_TQOHlPZtaMbStgX_hVAi1kL6-YpUBUpk9dhOc/edit?usp=sharing), Dominik Harz, UNSW Workshop on Protocols and Proofs for Blockchain Systems, Sydney, 2019.
 
 [Interoperability between Bitcoin and Ethereum - Trustless](https://docs.google.com/presentation/d/1f3qdnmD82ZoCcWrFmKh3jPMzu5qm4UJud3zsmGSNM5E/edit?usp=sharing), Dominik Harz, [Ethereum Development Conference (EDCON)](https://www.edcon.io/), Sydney, 2019.
 

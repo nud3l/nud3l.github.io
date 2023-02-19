@@ -1,14 +1,7 @@
----
-layout: page
-title: Home
----
 
-<!-- <p>
-    <img class="side-image" src="{{ site.url }}/assets/images/dominik_round.png" alt="Dominik">
-    Imagine you have an autonomous car. Wouldn't it be great if your car could earn money for you while you are not using it? The car could register itself in an app as a driver, charge itself and pay for it, and get itself fixed at a garage, if needed. To enable these capabilities the car needs to be able to communicate with a range of other entities, agree on contract terms, and have some measures to handle disputes or finding prices for services or goods. This involves a great deal of open research questions.
-</p> -->
 
-Imagine you would carry an agent around that can help you make financial decisions. Moreover, think that this agent could autonomously select [decentralized financial (DeFi) protocols](https://defillama.com/){:target="_blank"} in which to invest. And then take it a step further and imagine that your agent can automatically and privately collaborate with other agents to optimally balance your risk and profit criteria. To enable these capabilities your agents needs to be able to communicate with a range of other agents, ensure that those agents can be trusted, encode the agreed terms into smart contracts, and have some measures to handle disputes. This involves a great deal of open research questions.
+Imagine you would carry an agent around that can help you make financial decisions.
+Moreover, think that this agent could autonomously select [decentralized financial (DeFi) protocols](https://defillama.com/) in which to invest. And then take it a step further and imagine that your agent can automatically and privately collaborate with other agents to optimally balance your risk and profit criteria. To enable these capabilities your agents needs to be able to communicate with a range of other agents, ensure that those agents can be trusted, encode the agreed terms into smart contracts, and have some measures to handle disputes. This involves a great deal of open research questions.
 
 ## My Work
 
