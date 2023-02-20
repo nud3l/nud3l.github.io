@@ -91,6 +91,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       prism: {
+        additionalLanguages: ['solidity', 'rust'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
