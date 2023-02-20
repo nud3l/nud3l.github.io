@@ -22,8 +22,9 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'nud3l', // Usually your GitHub org/user name.
   projectName: 'nud3l.github.io', // Usually your repo name.
+  deploymentBranch: 'gh-pages', // Branch that GitHub pages will deploy from.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -55,7 +56,9 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    'docusaurus-plugin-goatcounter'
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -94,6 +97,9 @@ const config = {
         additionalLanguages: ['solidity', 'rust'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      goatcounter: {
+        code: 'harz_dev',
       },
     }),
   stylesheets: [

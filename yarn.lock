@@ -3445,6 +3445,11 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
+docusaurus-plugin-goatcounter@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-goatcounter/-/docusaurus-plugin-goatcounter-2.0.0.tgz#86a25522cb3eadc8b3b33916e47cdc9493adba00"
+  integrity sha512-3fuZSifjsgrCrkMePlKTSd+XDnBwqzqSe73jGBvqMxL5UTvWUpZ3/Vo2diPnfv3/9pea5wyB77rHZBKlYo7XXA==
+
 dom-converter@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
