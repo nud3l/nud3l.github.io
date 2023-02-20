@@ -14,7 +14,7 @@ My requirements for the test were simple: the tool should be integrated into the
 
 Spoiler alert: I managed to get a useful result in less than 2 hours.
 
-# Substrate Runtimes as Verification Targets
+## Substrate Runtimes as Verification Targets
 
 We are building the [Interlay](https://interlay.io) and Kintsugi blockchains based on the Rust [Substrate](https://substrate.dev) framework.
 For verifying that the "code is correct", we are looking for two targets:
@@ -22,7 +22,7 @@ For verifying that the "code is correct", we are looking for two targets:
 1. **Runtime**: The WASM runtime encodes the rules of the blockchain subject to consensus verification. This is where we can potentially introduce logical errors in how the protocols are working or in their implementation such that we either impact the *safety* or *liveness* of the system.
 2. **Node Implementation**: The node implementation wraps around the runtime. Bugs introduced here can impact the *liveness* of the system.
 
-# Diving into Verification
+## Diving into Verification
 
 Software verification is most often quite an academic exercise. With the adverse environment of blockchain development, there's a clear benefit of increased security assurance in the software development process.
 This goes hand in hand with the [desire of the verification community to integrate verification into the development process](https://alastairreid.github.io/papers/HATRA_20/).
@@ -35,7 +35,7 @@ My criteria for selecting tools were:
 2. **Clear documentation**: The tool should have clear documentation on how to use it and get started. If after 10 minutes of parsing the available documentation, I could not get a good understanding of how to install or use the tool, I would not use it.
 3. **Rust integration**: Since the idea is to integrate the tool into the normal development workflow, I was looking for a tool that integrates well with `cargo` and also does not require writing verification code in a language other than Rust.
 
-# Selected Tools
+## Selected Tools
 
 From the tools I found, I selected the following three tools for further exploration:
 
@@ -47,17 +47,17 @@ More tools are available on the [Rust Formal Methods Interest Group](https://rus
 
 For all tools, I installed them and ran them without any additional configuration against the [chain implementation](https://github.com/interlay/interbtc) of the Interlay blockchain.
 
-## A Note on Expectations
+### A Note on Expectations
 
 I would be happy if a tool runs on the first try: installing the tool without issues and scanning the code base without setting up verification rules. Overall, the code is well-tested, but it is very complex: more than 1,000 dependencies, almost 100,000 lines of code, and invoking external C libraries.
 
-# kani
+## kani
 
 From the [developer's website](https://model-checking.github.io/kani/getting-started.html):
 
 > Kani is an open-source verification tool that uses model checking to analyze Rust programs. Kani is particularly useful for verifying unsafe code in Rust, where many of the Rust’s usual guarantees are no longer checked by the compiler.
 
-## Getting started
+### Getting started
 
 I found getting started very easy with just two commands to execute:
 
@@ -73,7 +73,7 @@ Next, I ran kani against the runtime of the Interlay blockchain:
 cargo kani
 ```
 
-## Compilation Errors
+### Compilation Errors
 
 That produced the following error during the compilation of the `schnorrkel` crate:
 
@@ -95,13 +95,13 @@ At this point, I wasn't sure how to convince kani to ignore these errors in the 
 
 The authors have a guide on how to get started with [real code](https://model-checking.github.io/kani/tutorial-real-code.html) but it does not include how to handle compiler errors in dependencies.
 
-# Prusti
+## Prusti
 
 From the [developer's website](https://viperproject.github.io/prusti-dev/):
 
 > Prusti is a verification tool for Rust programs. It is based on the Rust compiler and uses the Rust type system to verify Rust programs. Prusti is a research prototype and is not yet ready for production use.
 
-## Getting started
+### Getting started
 
 Getting started with Prusti required downloading the Prusti Assistant VS Code extension.
 I already had the required Java SDk and `rustup` versions installed so the process of getting started only involved opening a rust file and hitting the "Verify with Prusti" button on the VS Code status bar.
@@ -110,13 +110,13 @@ I already had the required Java SDk and `rustup` versions installed so the proce
 
 As the first target, the [fee pallet](https://github.com/interlay/interbtc/blob/master/crates/fee/src/lib.rs) seemed interesting as it's mildly complex, has few dependencies, and with its fixed point math might be subject to issues.
 
-# MIRAI
+## MIRAI
 
 From the [developer's website](https://github.com/facebookexperimental/MIRAI):
 
 > MIRAI is an abstract interpreter for the Rust compiler's mid-level intermediate representation (MIR). It is intended to become a widely used static analysis tool for Rust.
 
-## Getting started
+### Getting started
 
 Installation of MIRAI was straightforward, following the [guide](https://github.com/facebookexperimental/MIRAI/blob/main/documentation/InstallationGuide.md):
 

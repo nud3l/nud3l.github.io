@@ -2,10 +2,10 @@
 slug: ethereum-python-integration
 title:  "Integrating Python and Ethereum"
 date:   2017-02-14
-tags: [blockchain, ethereum, python]
+tags: [dinvest, blockchain, ethereum, python]
 authors: dom
 ---
-In Ethereum and other blockchains there are still a lot of proof of concept implementation and developers trying out how to cope with the new concepts. As part of the dInvest [dInvest post series]({% post_url 2017-01-10-dinvest %}) I was also looking into Ethereum and trying to implement a hedge fund in a blockchain. In a previous post I discussed how to get a quantitative framework in python up and running. In this post I will write how to integrate python programs with Ethereum smart contracts. For one reason or another you might be also faced with the issue, that although Ethereum offers a Turing-complete language not everything is actually doable there.
+In Ethereum and other blockchains there are still a lot of proof of concept implementation and developers trying out how to cope with the new concepts. As part of the dInvest post series I was also looking into Ethereum and trying to implement a hedge fund in a blockchain. In a previous post I discussed how to get a quantitative framework in python up and running. In this post I will write how to integrate python programs with Ethereum smart contracts. For one reason or another you might be also faced with the issue, that although Ethereum offers a Turing-complete language not everything is actually doable there.
 
 Let's say you have created one of the [simple tutorial contracts in Ethereum](www.ethereum.org/greeter) and now want to look at something more advanced. I personally liked the [Hitchhiker's Guide to Smart Contracts](https://medium.com/zeppelin-blog/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05##.3dxx4rysl) by Manuel Aráoz to get started with more complex code, setup testrpc, and truffle. Take a look at it.
 
@@ -65,6 +65,7 @@ I prefer having my configurations in a separate file. There are many ways to do 
 
 ## Interacting with the smart contract
 Note: Before interacting with your own account you need to unlock it first. This is achieved in web3 via:
+
 ```python
 self.web3.personal.unlockAccount(your_ethereum_account, your_ethereum_password)
 ```
