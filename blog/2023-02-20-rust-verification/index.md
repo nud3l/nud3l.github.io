@@ -11,7 +11,7 @@ In this post, we'll explore options for verifying blockchain code, specifically 
 
 My requirements for the test were simple: the tool should be integrated into the Rust toolchain (no DSLs) and I set myself a time limit of a single day to get started and get a useful result.
 
-Spoiler alert: I managed to get a useful result in less than 2 hours.
+Spoiler alert: I managed to get two tools running and produce output. This post covers only the setup and I will follow up with more details in a future post.
 
 ## Substrate Runtimes as Verification Targets
 
@@ -90,7 +90,7 @@ help: you might be missing a string literal to format with
 
 ```
 
-At this point, I wasn't sure how to convince kani to ignore these errors in the dependencies.
+At this point, I wasn't sure how to convince kani to ignore these errors in the dependencies. I tried running kani only on a single crate but it resulted in the same compiler issue.
 
 The authors have a guide on how to get started with [real code](https://model-checking.github.io/kani/tutorial-real-code.html) but it does not include how to handle compiler errors in dependencies.
 
@@ -109,6 +109,39 @@ I already had the required Java SDk and `rustup` versions installed so the proce
 
 As the first target, the [fee pallet](https://github.com/interlay/interbtc/blob/master/crates/fee/src/lib.rs) seemed interesting as it's mildly complex, has few dependencies, and with its fixed point math might be subject to issues.
 
+### Errors
+
+On the first run on the fee crate, Prusti found 358 errors. That seemed quite a lot but after initial inspection, most of the errors were:
+
+- Unsupported features (313 errors): I was expecting Prusti with its [current feature set](https://viperproject.github.io/prusti-dev/user-guide/verify/summary.html) to run into these issues as substrate makes heavy use of macros, traits, and other advanced features of Rust.
+- Internal errors (24 errors): Several internal errors occured.
+- Unexpected verification error (9 errors): Some verification failed.
+- Verification errors (14 errors): These seem to be the ones worth investigating.
+
+### Success
+
+Prusti found potential overflow and underflow errors in the bitcoin crate:
+
+```rust
+// bitcoin/src/parser.rs
+if position + 4 > raw_bytes.len() {
+    return Err(Error::EndOfFile);
+}
+```
+
+It also found possible issues with unbounded arrays:
+
+```rust
+// bitcoin/src/script.rs
+pub fn op_return(return_content: &[u8]) -> Script {
+    let mut script = Script::new();
+    script.append(OpCode::OpReturn);
+    script.append(return_content.len() as u8);
+    script.append(return_content);
+    script
+}
+```
+
 ## MIRAI
 
 From the [developer's website](https://github.com/facebookexperimental/MIRAI):
@@ -125,3 +158,69 @@ cd MIRAI
 cargo install --locked --path ./checker
 ```
 
+Next, I ran MIRAI in the interbtc root directory.
+
+```bash
+cargo mirai
+```
+
+### Compilation Errors
+
+MIRAI produces compilation errors on the wasm builds:
+
+```bash
+     Compiling wasm-test v1.0.0 (/tmp/.tmpfNz4QS)
+  error[E0463]: can't find crate for `std`
+    |
+    = note: the `wasm32-unknown-unknown` target may not be installed
+    = help: consider downloading the target with `rustup target add wasm32-unknown-unknown`
+    = help: consider building the standard library from source with `cargo build -Zbuild-std`
+
+  error: requires `sized` lang_item
+
+  For more information about this error, try `rustc --explain E0463`.
+  error: could not compile `wasm-test` due to 2 previous errors
+  warning: build failed, waiting for other jobs to finish...
+  error: cannot find macro `println` in this scope
+   --> src/main.rs:3:5
+    |
+  3 |                 println!("{}", env!("RUSTC_VERSION"));
+    |                 ^^^^^^^
+
+  error: could not compile `wasm-test` due to 3 previous errors
+  ------------------------------------------------------------
+```
+
+### Success
+
+As the wasm build is done on the entire runtime, I decided to try my luck against a single pallet instead. Similar to before, I tried the fee crate. This worked and to my surprise, MIRAI did not print any warnings or errors.
+
+Next, I tried the bitcoin create that implements parsing and other somewhat error prone code. MIRAI gave me results here:
+
+```bash
+warning: possible attempt to subtract with overflow
+   --> crates/bitcoin/src/parser.rs:239:24
+    |
+239 |     let target: U256 = parser.parse()?;
+    |                        ^^^^^^^^^^^^^^
+    |
+note: related location
+   --> crates/bitcoin/src/parser.rs:177:40
+    |
+177 |         let (result, bytes_consumed) = T::parse(&self.raw_bytes, self.position)?;
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+note: related location
+   --> crates/bitcoin/src/parser.rs:151:23
+    |
+151 |         let compact = U256::set_compact(bits).ok_or(Error::InvalidCompact)?;
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^
+note: related location
+   --> crates/bitcoin/src/math.rs:53:25
+    |
+53  |             word << 8 * (size - 3)
+    |                         ^^^^^^^^^^
+```
+
+## Summary
+
+Overall, I was very happy with the results. I was able to run two tools against the crates without additional configuration and they found potential issues. Next up will be trying to implement custom verification rules and dive deeper into the identified issues.
