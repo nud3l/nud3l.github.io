@@ -1,7 +1,6 @@
 ---
 slug: ethereum-python-integration
 title:  "Integrating Python and Ethereum"
-date:   2017-02-14
 tags: [dinvest, blockchain, ethereum, python]
 authors: dom
 ---

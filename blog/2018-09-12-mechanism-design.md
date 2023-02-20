@@ -1,7 +1,6 @@
 ---
 slug: bitcoin-smart-contracts-mechanism-design
 title:  "Analyzing Bitcoin smart contracts from a mechanism design perspective"
-date:   2018-09-12
 tags: [blockchain, DeFi, mechanism design, smart contracts, Bitcoin]
 authors: dom
 ---

@@ -1,7 +1,6 @@
 ---
 slug: quantitative-finance-zipline
 title:  "Quantitative finance with zipline"
-date:   2017-02-10
 tags: [quant, finance, zipline, python]
 authors: dom
 ---

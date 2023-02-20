@@ -1,7 +1,6 @@
 ---
 slug: lean-execution
 title: "Lean Execution: How to Stay Focused"
-date: 2022-02-21
 tags: [agile, lean, execution, startup, product, engineering]
 authors: dom
 ---

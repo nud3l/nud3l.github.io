@@ -39,10 +39,13 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        docs: false,
         blog: {
           showReadingTime: true,
           editUrl:
             'https://github.com/nud3l/nud3l.github.io/',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
