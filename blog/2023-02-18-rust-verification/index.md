@@ -1,7 +1,7 @@
 ---
 slug: "rust-verification"
 title: "Verifying Rust: Exploring Verification Options for Substrate"
-date: 2023-02-18
+date: 2023-02-20
 tags: [blockchain, security, software-engineering, rust]
 authors: dom
 ---

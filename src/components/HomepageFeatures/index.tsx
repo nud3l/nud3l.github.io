@@ -9,11 +9,12 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Why',
+    title: 'About me',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        I believe that through collaboration we can build better societies. Blockchains enable collaboration on a global scale between humans and machines: obtaining an identity and the ability to interact is permissionless. The integration of on-chain identities and programmable money allows us to build entirely new systems.
+        <br />
+        These new systems should be transparent in that they enforce financial rules and interactions that cannot be cheated. However, they also come with great challenges as we navigate the issues of "intentions" of systems and their actual implementation.
       </>
     ),
   },
@@ -21,26 +22,26 @@ const FeatureList: FeatureItem[] = [
     title: 'My Work',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        I&apos;m the co-founder and CTO of <a href="https://interlay.io">Interlay</a> where we build Bitcoin DeFi infrastructure. We build and launched the first decentralized Bitcoin bridge. The bridge is based on the <a href="https://xclaim.io">XCLAIM</a>protocol that <a href="https://www.alexeizamyatin.me/">Alexei</a> and I developed during our PhDs. We are now building out lending protocols, AMMs, and core bridging infrastructure.
+        <br />
+        I did my PhD at the <a href="https://www.imperial.ac.uk/cryptocurrency">Imperial College London cryptocurrency lab</a> where I met some of the greatest people I had ever the chance to work with on DeFi, cross-chain, and smart contracts.
       </>
     ),
   },
   {
-    title: 'News',
+    title: 'Outside work',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        When I&apos;m not in front of a computer, you will find me outdoors chasing waves, doing triathlons, hiking, or skiing.
       </>
-    ),
+    )
   },
 ];
 
 function Feature({title, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
+    <div className={clsx('row')}>
+      <div className="padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -52,11 +53,9 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        {FeatureList.map((props, idx) => (
+          <Feature key={idx} {...props} />
+        ))}
       </div>
     </section>
   );

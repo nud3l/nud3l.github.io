@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Navigating Blocks and Chains',
-  tagline: 'The towel for your blockchain journey',
+  tagline: 'A Personal Perspective of the Web3 Space',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -53,13 +53,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/header.jpg',
       navbar: {
         title: 'Home',
-        logo: {
-          alt: 'Dom',
-          src: 'img/logo.png',
-        },
         items: [
           {
             to: '/blog',
@@ -82,9 +78,14 @@ const config = {
         style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()} Dominik Harz. Built with Docusaurus.`,
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       prism: {
-        darkTheme: darkCodeTheme,
         theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
       },
     }),
 };

@@ -1,10 +1,16 @@
 # Publications
 
-[The Decentralized Financial Crisis: Attacking DeFi](https://arxiv.org/abs/2002.08099), Lewis Gudgeon, Daniel Perez, Dominik Harz, Arthur Gervais, Benjamin Livshits, pre-print, 2020. 
+[PhD Thesis: Security and Efficiency of Collateral in Decentralized Finance](https://raw.githubusercontent.com/nud3l/nud3l.github.io/master/publications/dominik_harz_phd_thesis_10112022.pdf), Dominik Harz, PhD thesis, Imperial College London, 2022.
+
+[SoK: Decentralized Finance (DeFi)](https://arxiv.org/pdf/2101.08778.pdf), Sam Werner, Daniel Perez, Lewis Gudgeon, Ariah Klages-Mundt, Dominik Harz, William J. Knottenbelt, pre-print, 2021.
+
+[Stablecoins 2.0: Economic Foundations and Risk-based Models](https://arxiv.org/pdf/2006.12388.pdf), Ariah Klages-Mundt, Dominik Harz, Lewis Gudgeon, Jun-You Liu, Andreea Minca, Proceedings of the 2nd ACM Conference on Advances in Financial Technologies, 2021.
+
+[The Decentralized Financial Crisis: Attacking DeFi](https://arxiv.org/abs/2002.08099), Lewis Gudgeon, Daniel Perez, Dominik Harz, Arthur Gervais, Benjamin Livshits, 2020 Crypto Valley Conference on Blockchain Technology (CVCBT), 2020. 
 
 [Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://eprint.iacr.org/2019/675.pdf), Dominik Harz, Lewis Gudgeon, Arthur Gervais, William J. Knottenbelt, Proceedings of the 2019 ACM SIGSAC Conference on Computer & Communications Security (CCS '19), 2019.
 
-[Poster: Random Rewards in Proof-of-Stake Protocols](random-rewards/poster.pdf), Dominik Harz, Ryuya Nakamura, International Workshop on Security (IWSEC), Tokyo, 2019.
+[Poster: Random Rewards in Proof-of-Stake Protocols](https://raw.githubusercontent.com/nud3l/nud3l.github.io/master/publications/random-rewards/poster.pdf), Dominik Harz, Ryuya Nakamura, International Workshop on Security (IWSEC), Tokyo, 2019.
 
 [XCLAIM: Trustless, Interoperable Cryptocurrency-Backed Assets](https://eprint.iacr.org/2018/643), Alexei Zamyatin, Dominik Harz, Joshua Lind, Panayiotis Panayiotou, Arthur Gervais, William J. Knottenbelt, Proceedings of the IEEE Symposium on Security & Privacy, May 2019, 2019.
 
@@ -17,8 +23,7 @@
 [The Scalability of Trustless Trust](https://arxiv.org/pdf/1801.09535.pdf), Dominik Harz, Magnus Boman, 2nd Workshop on Trusted Smart Contracts at Financial Cryptography and Data Security 2018, 2018.
 
 [Trust and verifiable computation for smart contracts in permissionless blockchains](http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1111933&dswid=-143), Dominik Harz, MSc thesis project, KTH Stockholm, 2017.
-
-<h1 class="docs-header">Talks</h1>
+# Talks
 
 [Balance: Dynamic Adjustment of Cryptocurrency Deposits](https://youtu.be/TkVP7eOTxes), Dominik Harz, ACM CCS, London, 2019.
 
