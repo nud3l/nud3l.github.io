@@ -1,6 +1,6 @@
 # Publications
 
-[PhD Thesis: Security and Efficiency of Collateral in Decentralized Finance](https://raw.githubusercontent.com/nud3l/nud3l.github.io/master/publications/dominik_harz_phd_thesis_10112022.pdf), Dominik Harz, PhD thesis, Imperial College London, 2022.
+[PhD Thesis: Security and Efficiency of Collateral in Decentralized Finance](https://raw.githubusercontent.com/nud3l/nud3l.github.io/master/publications/dominik_harz_phd_thesis.pdf), Dominik Harz, PhD thesis, Imperial College London, 2022.
 
 [SoK: Decentralized Finance (DeFi)](https://arxiv.org/pdf/2101.08778.pdf), Sam Werner, Daniel Perez, Lewis Gudgeon, Ariah Klages-Mundt, Dominik Harz, William J. Knottenbelt, pre-print, 2021.
 
