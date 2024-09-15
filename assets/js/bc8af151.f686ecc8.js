@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2654],{745:s=>{s.exports=JSON.parse('{"label":"Flashloans","permalink":"/blog/tags/flashloans","allTagsPath":"/blog/tags","count":1}')}}]);
