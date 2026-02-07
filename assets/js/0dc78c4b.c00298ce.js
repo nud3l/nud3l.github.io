@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[9188],{1630(a){a.exports=JSON.parse('{"label":"agile","permalink":"/blog/tags/agile","allTagsPath":"/blog/tags","count":1}')}}]);

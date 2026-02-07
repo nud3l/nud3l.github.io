@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[2654],{745(a){a.exports=JSON.parse('{"label":"Flashloans","permalink":"/blog/tags/flashloans","allTagsPath":"/blog/tags","count":1}')}}]);

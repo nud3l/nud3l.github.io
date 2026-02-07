@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[6740],{3152(s){s.exports=JSON.parse('{"label":"mechanism design","permalink":"/blog/tags/mechanism-design","allTagsPath":"/blog/tags","count":1}')}}]);

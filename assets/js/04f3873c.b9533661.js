@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[3715],{5227(s){s.exports=JSON.parse('{"label":"security","permalink":"/blog/tags/security","allTagsPath":"/blog/tags","count":2}')}}]);

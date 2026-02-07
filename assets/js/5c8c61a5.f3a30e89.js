@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[9218],{7007(a){a.exports=JSON.parse('{"label":"lean","permalink":"/blog/tags/lean","allTagsPath":"/blog/tags","count":1}')}}]);
