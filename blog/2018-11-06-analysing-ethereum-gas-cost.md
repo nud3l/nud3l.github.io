@@ -1,7 +1,7 @@
 ---
 slug: analysing-ethereum-gas-cost
 title:  "Analysing Ethereum contract gas costs during development"
-categories: [blockchain, ethereum, smart-contracts, gas, truffle, testing]
+tags: [blockchain, ethereum, smart-contracts, gas, truffle, testing]
 authors: dom
 ---
 

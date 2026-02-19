@@ -138,23 +138,23 @@ $A$ will only consider revealing $H(z)$ in the proposed HTLC if $p \geq v_A(z)$.
 
 ## References
 
-\[1\] S. Fatima, S. Kraus, and M. Wooldridge, *Principles of Automated Negotiation*. Cambridge: Cambridge University Press, 2014 \[Online\]. Available: <http://ebooks.cambridge.org/ref/id/CBO9780511751691>
+\[1\] S. Fatima, S. Kraus, and M. Wooldridge, *Principles of Automated Negotiation*. Cambridge: Cambridge University Press, 2014 \[Online\]. Available: [http://ebooks.cambridge.org/ref/id/CBO9780511751691](http://ebooks.cambridge.org/ref/id/CBO9780511751691)
 
 \[2\] S. Nakamoto, "Bitcoin: A peer-to-peer electronic cash system," 2008.
 
-\[3\] Bitcoin Wiki, "Script." 2018 \[Online\]. Available: [https://en.bitcoin.it/wiki/Script{\\\#}Opcodes](https://en.bitcoin.it/wiki/Script{\#}Opcodes). \[Accessed: 27-Jun-2018\]
+\[3\] Bitcoin Wiki, "Script." 2018 \[Online\]. Available: [https://en.bitcoin.it/wiki/Script#Opcodes](https://en.bitcoin.it/wiki/Script#Opcodes). \[Accessed: 27-Jun-2018\]
 
-\[4\] N. Szabo, "Formalizing and Securing Relationships on Public Networks." 1997 \[Online\]. Available: <http://ojphi.org/ojs/index.php/fm/article/view/548/469>. \[Accessed: 07-Apr-2017\]
+\[4\] N. Szabo, "Formalizing and Securing Relationships on Public Networks." 1997 \[Online\]. Available: [http://ojphi.org/ojs/index.php/fm/article/view/548/469](http://ojphi.org/ojs/index.php/fm/article/view/548/469). \[Accessed: 07-Apr-2017\]
 
 \[5\] T. W. Sandholm and V. R. Lesser, "Leveled Commitment Contracts and Strategic Breach," *Games and Economic Behavior*, vol. 35, nos. 1-2, pp. 212--270, 2001.
 
 \[6\] N. Nisan, T. Roughgarden, E. Tardos, and V. V. Vazirani, *Algorithmic Game Theory*, vol. 1. Cambridge: Cambridge University Press, 2007, pp. 1--754 \[Online\]. Available: [http://portal.acm.org/citation.cfm?doid=1785414.1785439 http://ebooks.cambridge.org/ref/id/CBO9780511800481](http://portal.acm.org/citation.cfm?doid=1785414.1785439 http://ebooks.cambridge.org/ref/id/CBO9780511800481)
 
-\[7\] N. Nisan and A. Ronen, "Algorithmic Mechanism Design," *Games and Economic Behavior*, vol. 35, nos. 1-2, pp. 166--196, Apr. 2001 \[Online\]. Available: <http://linkinghub.elsevier.com/retrieve/pii/S089982569990790X>
+\[7\] N. Nisan and A. Ronen, "Algorithmic Mechanism Design," *Games and Economic Behavior*, vol. 35, nos. 1-2, pp. 166--196, Apr. 2001 \[Online\]. Available: [http://linkinghub.elsevier.com/retrieve/pii/S089982569990790X](http://linkinghub.elsevier.com/retrieve/pii/S089982569990790X)
 
-\[8\] Bitcoin Wiki, "Hashed Timelock Contracts." 2018 \[Online\]. Available: [https://en.bitcoin.it/wiki/Hashed{\\\_}Timelock{\\\_}Contracts](https://en.bitcoin.it/wiki/Hashed{\_}Timelock{\_}Contracts). \[Accessed: 28-Jun-2018\]
+\[8\] Bitcoin Wiki, "Hashed Timelock Contracts." 2018 \[Online\]. Available: [https://en.bitcoin.it/wiki/Hashed\_Timelock\_Contracts](https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts). \[Accessed: 28-Jun-2018\]
 
-\[9\] I. Bentov *et al.*, "Tesseract: Real-Time Cryptocurrency Exchange using Trusted Hardware," 2017 \[Online\]. Available: [http://www.cs.cornell.edu/{\~}iddo/RTExchSGX.pdf](http://www.cs.cornell.edu/{~}iddo/RTExchSGX.pdf)
+\[9\] I. Bentov *et al.*, "Tesseract: Real-Time Cryptocurrency Exchange using Trusted Hardware," 2017 \[Online\]. Available: [http://www.cs.cornell.edu/~iddo/RTExchSGX.pdf](http://www.cs.cornell.edu/~iddo/RTExchSGX.pdf)
 
-\[10\] A. Juels and B. Kaliski Jr., "Pors: Proofs of retrievability for large files," *Proceedings of the ACM Conference on Computer and Communications Security*, pp. 584--597, 2007 \[Online\]. Available: [http://www.scopus.com/inward/record.url?eid=2-s2.0-74049101079{\\&}partnerID=40{\\&}md5=83cf075b3704d4fe5bfb2ccf38c39362](http://www.scopus.com/inward/record.url?eid=2-s2.0-74049101079{\&}partnerID=40{\&}md5=83cf075b3704d4fe5bfb2ccf38c39362)
+\[10\] A. Juels and B. Kaliski Jr., "Pors: Proofs of retrievability for large files," *Proceedings of the ACM Conference on Computer and Communications Security*, pp. 584--597, 2007 \[Online\]. Available: [http://www.scopus.com/inward/record.url?eid=2-s2.0-74049101079&partnerID=40&md5=83cf075b3704d4fe5bfb2ccf38c39362](http://www.scopus.com/inward/record.url?eid=2-s2.0-74049101079&partnerID=40&md5=83cf075b3704d4fe5bfb2ccf38c39362)
 

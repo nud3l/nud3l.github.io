@@ -6,7 +6,7 @@ authors: dom
 ---
 In Ethereum and other blockchains there are still a lot of proof of concept implementation and developers trying out how to cope with the new concepts. As part of the dInvest post series I was also looking into Ethereum and trying to implement a hedge fund in a blockchain. In a previous post I discussed how to get a quantitative framework in python up and running. In this post I will write how to integrate python programs with Ethereum smart contracts. For one reason or another you might be also faced with the issue, that although Ethereum offers a Turing-complete language not everything is actually doable there.
 
-Let's say you have created one of the [simple tutorial contracts in Ethereum](www.ethereum.org/greeter) and now want to look at something more advanced. I personally liked the [Hitchhiker's Guide to Smart Contracts](https://medium.com/zeppelin-blog/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05##.3dxx4rysl) by Manuel Aráoz to get started with more complex code, setup testrpc, and truffle. Take a look at it.
+Let's say you have created one of the [simple tutorial contracts in Ethereum](https://www.ethereum.org/greeter) and now want to look at something more advanced. I personally liked the [Hitchhiker's Guide to Smart Contracts](https://medium.com/zeppelin-blog/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05##.3dxx4rysl) by Manuel Aráoz to get started with more complex code, setup testrpc, and truffle. Take a look at it.
 
 ## dInvest smart contract
 dInvest is composed of one smart contract that is responsible for making investments, verifying investment
@@ -21,10 +21,10 @@ as a black list when making the investments. Therefore user have the ability con
 hedge fund will invest on.
 
 
-The contract can be found in [the GitHub repo](github.com/nud3l/dInvest/blob/master/solidity/contracts/HedgeContract1.sol).
+The contract can be found in [the GitHub repo](https://github.com/nud3l/dInvest/blob/master/solidity/contracts/HedgeContract1.sol).
 
 ## Interaction with smart contracts
-To interact with smart contracts, there are a couple of option including RPC or a JavaScript API. I found the easiest way to interact with Ethereum smart contracts from other programs (like python programs) was using their [web3 JavaScript API](github.com/ethereum/wiki/wiki/JavaScript-API). As the majority of dInvest is written in python, I wanted to stick to the language and not include JS as well. Luckily, there is a [web3 implementation in python](github.com/pipermerriam/web3.py). To get it up and running for the dInvest setting I switched to the virtualenv, where I also installed zipline and then install web3 simply with ```pip install web3```.
+To interact with smart contracts, there are a couple of option including RPC or a JavaScript API. I found the easiest way to interact with Ethereum smart contracts from other programs (like python programs) was using their [web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API). As the majority of dInvest is written in python, I wanted to stick to the language and not include JS as well. Luckily, there is a [web3 implementation in python](https://github.com/pipermerriam/web3.py). To get it up and running for the dInvest setting I switched to the virtualenv, where I also installed zipline and then install web3 simply with ```pip install web3```.
 
 Using web3, there are three steps to get you up and running to interact with your smart contract:
 
@@ -42,7 +42,7 @@ contract
 ```
 
 ## Getting your ABI
-Now, to interact with any smart contract you need the [Application Binary Interface(ABI)](github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) defined by the contract. The ABI is a static, strongly typed interface. Whenever you create a new contract or change an existing one, chances are your ABI changes as well. In my experience the easiest way to get the current ABI of a smart contract (which might be yours or any contract you have the source code available) is to go to [https://ethereum.github.io/browser-solidity/](https://ethereum.github.io/browser-solidity/) and copy/paste your code there. Then press the "Compile" button on the upper right side and copy the entire string in the "Interface" field into a ```your-contract-name.json``` file. Once you have that JSON, your web3 interface will know how to interact with the contract.
+Now, to interact with any smart contract you need the [Application Binary Interface(ABI)](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) defined by the contract. The ABI is a static, strongly typed interface. Whenever you create a new contract or change an existing one, chances are your ABI changes as well. In my experience the easiest way to get the current ABI of a smart contract (which might be yours or any contract you have the source code available) is to go to [https://ethereum.github.io/browser-solidity/](https://ethereum.github.io/browser-solidity/) and copy/paste your code there. Then press the "Compile" button on the upper right side and copy the entire string in the "Interface" field into a ```your-contract-name.json``` file. Once you have that JSON, your web3 interface will know how to interact with the contract.
 
 ## Setting up the RPC provider
 As a next step you will need to connect to the RPC provider. In your python file (e.g. ```ContractHandler.py```) include those lines of code:
@@ -84,4 +84,4 @@ blacklist = self.contract.call().blackListCompanies()
 There are some more examples in the [GitHub code available](https://github.com/nud3l/dInvest/blob/master/trading/contract/ContractHandler.py).
 
 ## Final note
-As a final note, I would like to point out that there are other blockchain solutions like [Hyperledger Fabric](hyperledger-fabric.readthedocs.io/en/latest/) or [Tendermint](tendermint.com) that aim to solve issues around compatibility with other programming language, transaction throughput etc. As they are permissioned blockchains I haven't yet given them a try, but might be interesting to take a look at.
+As a final note, I would like to point out that there are other blockchain solutions like [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/latest/) or [Tendermint](https://tendermint.com) that aim to solve issues around compatibility with other programming language, transaction throughput etc. As they are permissioned blockchains I haven't yet given them a try, but might be interesting to take a look at.

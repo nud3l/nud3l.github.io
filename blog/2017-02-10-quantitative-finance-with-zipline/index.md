@@ -5,7 +5,7 @@ tags: [quant, finance, zipline, python]
 authors: dom
 ---
 
-As stated in the [dInvest post series]({% post_url 2017-01-10-dinvest %}) the idea is to build a hedge fund in a blockchain. Due to computational limitations, it is not feasible to implement investment agents in the blockchain. In dInvest an investment agent should do the following: (1) Get a list of all available financial assets to trade; (2) based on the data given (i.e. financial data and fundamentals data) make a recommendation which assets to buy; (3) keep track of which assets the agent is currently holding; and (4) send the recommended assets to buy to the blockchain. In this blog post I will cover the first three tasks. But what does a hedge fund actually do and how do financial investment strategies look like? I had taken some courses in my undergrad on international finance, but as a computer scientist I had to learn some new concepts while doing this project.
+As stated in the [dInvest post series](/blog/dinvest-hedge-fund-on-a-blockchain) the idea is to build a hedge fund in a blockchain. Due to computational limitations, it is not feasible to implement investment agents in the blockchain. In dInvest an investment agent should do the following: (1) Get a list of all available financial assets to trade; (2) based on the data given (i.e. financial data and fundamentals data) make a recommendation which assets to buy; (3) keep track of which assets the agent is currently holding; and (4) send the recommended assets to buy to the blockchain. In this blog post I will cover the first three tasks. But what does a hedge fund actually do and how do financial investment strategies look like? I had taken some courses in my undergrad on international finance, but as a computer scientist I had to learn some new concepts while doing this project.
 
 
 Financial investments can take different forms. A hedge fund offers multiple individuals to acquire a part of the pooled investment, which itself invests in publicly
@@ -40,12 +40,12 @@ to test our algorithms without using actual money, (2) realistic conditions of t
 fees and process delays, (3) is able to trade shares and derivatives based on historical data to test our
 algorithm, (4) provide little delay (lower than 10 minutes) in trading current assets, and (5) is able to be
 controlled using a programming language (such as Python, Java, or Scala). We evaluated several solutions
-decided to use the open source implementation of the Quantopian framework [zipline](github.com/quantopian/zipline).
+decided to use the open source implementation of the Quantopian framework [zipline](https://github.com/quantopian/zipline).
 
 ## Getting started with zipline
 
-Zipline is based on python and is able to run with python 2 and 3. Quantopian has created a [beginners tutorial](www.zipline.io/beginner-tutorial.html) on their website. Before going into the details of zipline, let us look into how to set it up locally. Note: I will be using python3 throughout this post.
-To install zipline you first need all the required C extensions. For Debian based distributions use the command shown below, otherwise there are some more details [provided here](www.zipline.io/install.html).
+Zipline is based on python and is able to run with python 2 and 3. Quantopian has created a [beginners tutorial](https://www.zipline.io/beginner-tutorial.html) on their website. Before going into the details of zipline, let us look into how to set it up locally. Note: I will be using python3 throughout this post.
+To install zipline you first need all the required C extensions. For Debian based distributions use the command shown below, otherwise there are some more details [provided here](https://www.zipline.io/install.html).
 
 ```
 sudo apt-get install libatlas-base-dev python-dev gfortran pkg-config libfreetype6-dev
@@ -70,7 +70,7 @@ It is basically taken from the web-based version of zipline called Quantopian an
 
 ```rebalance(context, data)``` This essentially takes to selected assets and distributes them evenly into our portfolio.
 
-```get_fundamentals(context, data)``` In Quantopian this is fairly easy, since the Morningstar fundamentals dataset is included. However, in zipline I had to find a workaround. Quandl offers the SF0 fundamentals for free: [www.quandl.com/data/SF0-Free-US-Fundamentals-Data](www.quandl.com/data/SF0-Free-US-Fundamentals-Data). To get a full view of the data, I choose to download the whole data as a CSV file and automated the process. An example of how to do this can be found in the ```TradeHandler.getData(self)``` function [here](https://github.com/nud3l/dInvest/blob/master/trading/trader/TradeHandler.py).
+```get_fundamentals(context, data)``` In Quantopian this is fairly easy, since the Morningstar fundamentals dataset is included. However, in zipline I had to find a workaround. Quandl offers the SF0 fundamentals for free: [www.quandl.com/data/SF0-Free-US-Fundamentals-Data](https://www.quandl.com/data/SF0-Free-US-Fundamentals-Data). To get a full view of the data, I choose to download the whole data as a CSV file and automated the process. An example of how to do this can be found in the ```TradeHandler.getData(self)``` function [here](https://github.com/nud3l/dInvest/blob/master/trading/trader/TradeHandler.py).
 
 ```get_sectors(key)``` Again, this is included in Quantopian, but needs a manual workaround. To get the sector codes it is quite simple. You need to download a txt file, which includes the sector codes and the function will read them into a dict.
 
