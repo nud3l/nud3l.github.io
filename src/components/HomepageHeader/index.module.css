@@ -4,20 +4,54 @@
  */
 
 .heroBanner {
-  background-image: url('/static/img/header.jpg');
-  background-size: 100%;
-  padding: 4rem 0;
-  margin-bottom: 1rem;
+  background-image: url('/img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 2rem;
+  margin-bottom: 3rem;
+  /* Pull up into the parent's margin-vert--lg so hero sits right below navbar */
+  margin-top: -2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
   color: #fff;
-  font-size: xx-large;
+  /* Break out of parent container to full viewport width */
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 1.5rem;
-    font-size: x-large;
+    padding: 4rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
   }
 }

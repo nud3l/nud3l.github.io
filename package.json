@@ -43,6 +43,11 @@
       "last 1 safari version"
     ]
   },
+  "pnpm": {
+    "overrides": {
+      "minimatch": ">=10.2.1"
+    }
+  },
   "engines": {
     "node": ">=20.0"
   }

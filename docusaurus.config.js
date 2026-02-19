@@ -80,20 +80,34 @@ module.exports = async function createConfigAsync() {
               label: 'Publications',
               position: 'left',
             },
-            {
-              to: '/contact',
-              label: 'Contact',
-              position: 'left',
-            }
           ],
         },
         footer: {
           style: 'dark',
-          copyright: `Copyright © ${new Date().getFullYear()} Dominik Harz. Built with Docusaurus.`,
+          links: [
+            {
+              title: 'Contact',
+              items: [
+                {
+                  label: 'Twitter',
+                  href: 'https://x.com/dom60808',
+                },
+                {
+                  label: 'GitHub',
+                  href: 'https://github.com/nud3l',
+                },
+                {
+                  label: 'StackExchange',
+                  href: 'https://stackexchange.com/users/9738481/dominik-harz',
+                },
+              ],
+            },
+          ],
+          copyright: `© ${new Date().getFullYear()} Dominik Harz`,
         },
         colorMode: {
           defaultMode: 'dark',
-          disableSwitch: false,
+          disableSwitch: true,
           respectPrefersColorScheme: false,
         },
         prism: {
