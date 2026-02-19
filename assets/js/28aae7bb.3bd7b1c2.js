@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[9323],{1799(s){s.exports=JSON.parse('{"label":"dinvest","permalink":"/blog/tags/dinvest","allTagsPath":"/blog/tags","count":2}')}}]);

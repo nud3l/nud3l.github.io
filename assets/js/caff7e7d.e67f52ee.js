@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[8034],{159(a){a.exports=JSON.parse('{"label":"quant","permalink":"/blog/tags/quant","allTagsPath":"/blog/tags","count":1}')}}]);

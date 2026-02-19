@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[7713],{7084(a){a.exports=JSON.parse('{"label":"MakerDAO","permalink":"/blog/tags/maker-dao","allTagsPath":"/blog/tags","count":1}')}}]);
