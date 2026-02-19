@@ -8,12 +8,8 @@
 .history
 
 node_modules
-.yarn
-package-lock.json
 
 .eslintcache
-
-yarn-error.log
 build
 coverage
 .docusaurus
