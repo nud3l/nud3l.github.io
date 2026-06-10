@@ -5,33 +5,38 @@ tags: [ai, bitcoin, defi, agents, onchain]
 authors: dom
 ---
 
-Managing money is a tricky business. Most people know this, and it's no different for me. But I do like to tinker with software, AI, and blockchains. So why not solve this problem with technology? After all, who hasn't dreamed about magically multiplying their money without any effort.
+Nobody wants to wake up to a "Sorry, your money is gone. I really shouldn't have gone 20x leverage with your entire portfolio on this memecoin".
+
+Yet here we are. I like to tinker with software, AI, and blockchains, so why not combine this to let agents handle my money? After all, who hasn't dreamed about magically multiplying their money without any effort.
 
 Surely, nothing can go wrong with that.
 
-Anyone that has worked with AI knows that keeping it in check is a challenge. After all, nobody wants to wake up to a "Sorry, your money is gone. I really shouldn't have gone 20x leverage with your entire portfolio on this memecoin". Our preferences, risk-appetite, and intentions need to be clearly defined and then enforced in a robust way, not by pleading in our agents.md, in the AI memory layer, or prompts.
+<!-- truncate -->
 
-In this post I'm exploring my current exploration of this vision. I have three hypotheses how AI-native finance will play out and along those I'm exploring the space:
+## The Future of Finance
+
+Anyone who has worked with AI knows how hard it is to keep in check. Our preferences, risk-appetite, and intentions need to be clearly defined and then enforced in a robust way, not by pleading in our agents.md, in the AI memory layer, or prompts.
+
+I have three hypotheses for how AI-native finance will play out:
 
 1. **AI agents learn to manage money better and faster than (most) humans will**. But they will eventually break any boundaries you set them to finish their task (make you more money). And in the process they will catastrophically fail.
-2. **Enforcing strict rules requires cryptography and onchain programs that are impossible for the agent to change.** We need to define our intentions into a set of rules that agents cannot circumvent. Blockchains are useful for this since changing Bitcoin or Ethereum is very hard.
+2. **Enforcing strict rules requires cryptography and onchain programs that are impossible for the agent to change.** We need to define our intentions into a set of rules that agents cannot circumvent. Blockchains are useful at rule enforcement because they rely on global consensus.
 3. **Finance agents will be personal to you**. Instead of generic apps where users need to actively make decisions, finance agents will have autonomy over decisions. They will also be way more tightly integrated into our current communication layers (read: chat apps).
 
-<!-- truncate -->
+In this post I'll lay out the three hypotheses, the problems underneath each, and the shape of the solution I'm betting on. The deep implementation, like how the rules actually get enforced across chains, is for a follow-up.
+
 
 ## Agents Managing Money
 
 Agents will manage money better than the majority of humans. Not because humans are not capable, but because investing is hard and agents improve at a rate (most) humans can't match. The pace at which my personal software engineering workflow changed in the last 12 months, from mostly writing code myself, to AI-assisted coding and AI reviews, to 95% of my code being AI generated with custom workflows, is stunning.
 
-When Karpathy published [autoresearch](https://github.com/karpathy/autoresearch) it dawned on me how easy it is going to be to develop trading algorithms. In a nutshell, the idea of autoresearch is that an agent tries to optimize some sort of function (building an LLM, investing, ...) by coming up with hypotheses and testing them. The agent records each experiment with as little oversight as possible. Spoiler alert: getting the backtesting right is where most of this falls apart. Point an optimization loop at historical data and it gets very good at finding strategies that look great on the backtest and lose money live. That's the hard part, and it's why I wouldn't trust an agent's edge just because it did well on past data.
+When Karpathy published [autoresearch](https://github.com/karpathy/autoresearch) it dawned on me how easy it is going to be to develop trading algorithms. In a nutshell, the idea of autoresearch is that an agent tries to optimize some sort of function (building an LLM, investing, ...) by coming up with hypotheses and testing them. The agent records each experiment with as little oversight as possible. Spoiler alert: getting the backtesting right is where most of this falls apart. Point an optimization loop at historical data and it gets good at finding strategies that look great on the backtest and lose money live. That's the hard part, and it's why I wouldn't trust an agent's edge just because it did well on past data.
 
-Nevertheless, autoresearch sparked a big push for people to use the core principle of agent-owned hypothesis and experimentation research loops. The continuation of this principle will find its way to custom functions (what are the risk profiles are person is willing to take, what should the AI optimize for, ...).
+Nevertheless, autoresearch sparked a big push for people to use the core principle of agent-owned hypothesis and experimentation research loops. The continuation of this principle will find its way to custom functions (what risk profile a person is willing to take, what should the AI optimize for, ...).
 
-We can take this even further with nested agents. A meta-investment agent delegating to specialized agents, e.g., the meta agent has $10k that it wants to invest in a diversified position and decides to delegate 50% of its portfolio to an all-world ETF agent, 40% to the stock market and 10% to a high-risk leveraged crypto trading agent.
+We can take this even further with nested agents. A meta-investment agent delegating to specialized agents: For example, the meta agent has $10k that it wants to invest in a diversified position. It decides to delegate 50% of its portfolio to an all-world ETF agent, 40% to the stock market, and 10% to a high-risk leveraged crypto trading agent.
 
 Each agent can optimize its own function continuously with the meta-agent keeping the big picture in mind. The meta-agent or specific "audit" agents can also keep an eye on the function being optimized and how it's tested. For example, just increasing leverage on a high-risk strategy might increase risk outside of the bounds that the user is comfortable with.
-
-If you've been around for a longer time, then this isn't necessarily new. Multi-agent systems were very popular back in the day. It is only that LLMs allow us to put a lot of the theory in practice now with reasonably little effort as anyone can write an agent. Generating code is now accessible to anyone with an LLM subscription or a local computer with enough compute power.
 
 I'm sure that self-learning finance agents available to anyone is just a matter of time. To get there, we need to solve two hard problems:
 
@@ -40,25 +45,15 @@ I'm sure that self-learning finance agents available to anyone is just a matter 
 
 Adoption is often listed as a third challenge, but I don't think it's a peer to these two. People don't adopt infrastructure, they adopt products that work. If autonomous finance is safe and genuinely useful, the distribution problem mostly takes care of itself. And as I'll argue later, the distribution channel already exists in the chat apps we use every day.
 
-## Agent-Based Finance
-
-### Going Onchain
+## Going Onchain
 
 While agents could use existing banking APIs, they have the downside that it's not truly autonomous. Banks (still) require humans to complete KYC/KYB procedures.
 
 Clearly, agents managing their own wallets onchain is the near future for agent-owned finance. They can freely create new wallets, trade assets, borrow funds, and interact with other humans and agents. While most onchain interactions are around blue-chip assets like BTC, ETH, SOL and stablecoins, the push for real-world assets including stocks, ETFs and others is only accelerating. From my perspective, onchain unlocks much higher efficiency to transfer assets and thus financial institutions will eventually push for assets to be onchain.
 
-### Constraining Agents
-
-Anyone who has ever used LLMs knows this: You ask the AI to not do something but throughout the conversation it just forgets. Your API keys get sent to Anthropic or OpenAI. Your OpenClaw instance is open to the internet. Containing AIs is tricky since it will find creative ways to achieve what you ask for it while failing you in unintended ways. Your app will be built and published. But it might use a compromised dependency as you did not explicitly ask it to check to not deploy vulnerable code.
-
-Potentially catastrophic side-effects are a massive problem. They are rooted in the conflict between (1) letting the AI run as autonomously as possible (clicking approve all the time is annoying) and (2) the high effort of verifying the AI's output (who really has time to read all that code and actually understand it?).
-
-When it comes to money, we need a mechanism to clearly define our boundaries and enforce rules that AI cannot circumvent. Luckily, we know that with cryptography and smart contracts enforced by consensus, we can add a layer of enforcement the agent will have a difficult time working around. Bonus points if we can do this in a privacy-preserving way!
-
 ## Controlling Your Agents
 
-On the trade-off of handing over autonomy to the agent vs verifiying, we will likely see various degrees of agent-based finance ranging from AI-assisted finance to fully autonomous with various shades in between. 
+On the trade-off of handing over autonomy to the agent vs verifying, we will likely see various degrees of agent-based finance ranging from AI-assisted finance to fully autonomous with various shades in between. 
 
 **AI-assisted finance** means that an agent suggests certain strategies and transactions but the execution of financial transactions is left to the human. For example, Claude can analyze assets and develop trading strategies. But the human in the loop would not give their API keys or private keys to the Claude instance to actually execute the trades. They have to do it themselves as a last step to verify that they really want to do this.
 
@@ -68,9 +63,17 @@ This isn't black-and-white and likely there will be many in-between solutions. F
 
 The big open question is of course: How are we going to safeguard the autonomous agents?
 
+## Constraining Agents
+
+Anyone who has ever used LLMs knows this: You ask the AI to not do something but throughout the conversation it just forgets. Your API keys get sent to Anthropic or OpenAI. Your OpenClaw instance is open to the internet. Containing AIs is tricky since it will find creative ways to achieve what you ask for it while failing you in unintended ways. Your app will be built and published. But it might use a compromised dependency as you did not explicitly ask it to check to not deploy vulnerable code.
+
+Potentially catastrophic side-effects are a massive problem. They are rooted in the conflict between (1) letting the AI run as autonomously as possible (clicking approve all the time is annoying) and (2) the high effort of verifying the AI's output (who really has time to read all that code and actually understand it?).
+
+When it comes to money, we need a mechanism to clearly define our boundaries and enforce rules that AI cannot circumvent. Luckily, we know that with cryptography and smart contracts enforced by consensus, we can add a layer of enforcement the agent will have a difficult time working around. Bonus points if we can do this in a privacy-preserving way!
+
 ## Smart Accounts with Hard Rails
 
-Giving an agent access to your bank accounts and private keys is where things get interesting and dangerous. Prompt-based guardrails don't work, and I mean it. Anyone who has worked with AI knows the pattern: you give clear instructions, and the model does exactly the thing you told it not to do. Prompts are suggestions. The agent can reinterpret them, find edge cases, or just ignore them when its reasoning leads somewhere else. You can't tell an agent "don't spend more than 1 BTC" and trust that it will listen.
+Giving an agent access to your bank accounts and private keys is where things get interesting and dangerous. Prompt-based guardrails don't work. Anyone who has worked with AI knows the pattern: you give clear instructions, and the model does exactly the thing you told it not to do. Prompts are suggestions. The agent can reinterpret them, find edge cases, or just ignore them when its reasoning leads somewhere else. You can't tell an agent "don't spend more than 1 BTC" and trust that it will listen.
 
 So the guardrails can't live in the prompt. They have to live in the wallet.
 
