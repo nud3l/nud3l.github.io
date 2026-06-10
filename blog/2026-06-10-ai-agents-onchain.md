@@ -23,7 +23,7 @@ In this post I'm exploring my current exploration of this vision. I have three h
 
 Agents will manage money better than the majority of humans. Not because humans are not capable, but because investing is hard and agents improve at a rate (most) humans can't match. The pace at which my personal software engineering workflow changed in the last 12 months, from mostly writing code myself, to AI-assisted coding and AI reviews, to 95% of my code being AI generated with custom workflows, is stunning.
 
-When Karpathy published [autoresearch](https://github.com/karpathy/autoresearch) it dawned on me how easy it is going to be to develop trading algorithms. In a nutshell, the idea of autoresearch is that an agent tries to optimize some sort of function (building an LLM, investing, ...) by coming up with hypotheses and testing them. The agent records each experiment with as little oversight as possible. Spoiler alert: getting the backtesting right for investment strategies is actually quite a challenge, but more on that in another post.
+When Karpathy published [autoresearch](https://github.com/karpathy/autoresearch) it dawned on me how easy it is going to be to develop trading algorithms. In a nutshell, the idea of autoresearch is that an agent tries to optimize some sort of function (building an LLM, investing, ...) by coming up with hypotheses and testing them. The agent records each experiment with as little oversight as possible. Spoiler alert: getting the backtesting right is where most of this falls apart. Point an optimization loop at historical data and it gets very good at finding strategies that look great on the backtest and lose money live. That's the hard part, and it's why I wouldn't trust an agent's edge just because it did well on past data.
 
 Nevertheless, autoresearch sparked a big push for people to use the core principle of agent-owned hypothesis and experimentation research loops. The continuation of this principle will find its way to custom functions (what are the risk profiles are person is willing to take, what should the AI optimize for, ...).
 
@@ -33,11 +33,12 @@ Each agent can optimize its own function continuously with the meta-agent keepin
 
 If you've been around for a longer time, then this isn't necessarily new. Multi-agent systems were very popular back in the day. It is only that LLMs allow us to put a lot of the theory in practice now with reasonably little effort as anyone can write an agent. Generating code is now accessible to anyone with an LLM subscription or a local computer with enough compute power.
 
-I'm sure that self-learning finance agents available to anyone is just a matter of time. To get there, we need to solve three challenges:
+I'm sure that self-learning finance agents available to anyone is just a matter of time. To get there, we need to solve two hard problems:
 
-1. Agents need to be able to interact with finance directly. 
-2. Agents need to be constrained to whatever the user is comfortable with.
-3. Users need to adopt the technology.
+1. Agents need to interact with finance directly, with their own funds and accounts.
+2. Agents need to be constrained to whatever the user is comfortable with, in a way they can't talk their way around.
+
+Adoption is often listed as a third challenge, but I don't think it's a peer to these two. People don't adopt infrastructure, they adopt products that work. If autonomous finance is safe and genuinely useful, the distribution problem mostly takes care of itself. And as I'll argue later, the distribution channel already exists in the chat apps we use every day.
 
 ## Agent-Based Finance
 
@@ -73,6 +74,8 @@ Giving an agent access to your bank accounts and private keys is where things ge
 
 So the guardrails can't live in the prompt. They have to live in the wallet.
 
+But "in the wallet" only works if the agent can't quietly rewrite the wallet's rules. That means a separation of keys. The agent holds an operating key that can only act within the limits. You hold a separate key, one the agent never has access to, that is the only key able to change the limits, upgrade the account, or move funds out of bounds. The agent can spend up to 0.1 BTC a day, but it cannot raise that number to 1, because the key that sets it isn't on the machine the agent runs on. If the agent's key leaks, the blast radius is one day's limit, not the whole account. The boundary is only real because the agent can't reach the thing that defines the boundary. This is also why onchain matters here and bank APIs don't: the chain enforces the split between the two keys without trusting either the agent or an intermediary to honor it.
+
 This is where smart accounts come in. A programmable layer on your assets where the rules are enforced by code. The agent can request transactions, but the account only executes them if they pass the rules. If the rules say "max 0.1 BTC per day", the agent literally cannot spend more. 
 
 What those rules could look like:
@@ -85,9 +88,7 @@ What those rules could look like:
 
 The key point is that these rules exist between the agent and the money. The agent can be as creative as it wants within the boundaries. It just can't move the boundaries.
 
-How could we implement this? My current thinking is that agents would produce transactions that execute against funds in a smart account. Alongside the prepared transactions, they would need to produce a zk proof of the actions. The zk proof would check that the rules of the smart account are not violated. If the zk proof passes, the agents can execute the actions. Interestingly, using zk proofs would work on Ethereum and other EVM chains at constant cost. With BitVM, it would also work on Bitcoin. Plus, with zk proofs, we can define (almost) arbitrarily complex rules with a constant verification cost.
-
-These are very broad strokes and warrant a follow-up post.
+The mechanism is straightforward in principle: the rules live in the smart account and are checked on-chain before any transaction executes. The agent prepares a transaction, the account verifies it against the rules, and only then does it settle. How those rules get expressed and enforced efficiently, especially across both EVM chains and Bitcoin, is its own rabbit hole and warrants a dedicated post.
 
 ## Finance Moves Into Conversation
 
