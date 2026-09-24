@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1280 590" role="img" aria-labelledby="title desc">
+  <title id="title">One trade through Pakt</title>
+  <desc id="desc">A person approves a Pakt root. An agent proposes an exact order, the policy is proved, and an enclave checks the proof against the approved root. A refused order gets a receipt but no signature. An allowed order reaches the restricted signer, then the agent submits the signed order unchanged.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L10 6 L1 11" fill="none" stroke="#344054" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="red-arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L10 6 L1 11" fill="none" stroke="#bb4b4b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .hand { font-family: 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', sans-serif; fill: #253247; }
+      .eyebrow { font-size: 16px; font-weight: 700; letter-spacing: 1.4px; }
+      .label { font-size: 25px; font-weight: 700; }
+      .body { font-size: 19px; }
+      .small { font-size: 17px; }
+      .line { fill: none; stroke: #344054; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+      .redline { fill: none; stroke: #bb4b4b; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="760" fill="#fbfaf6"/>
+  <!-- Human approval and the fixed root. -->
+  <path d="M64 154 Q61 149 70 148 L479 150 Q486 151 486 158 L484 267 Q484 275 477 274 L69 273 Q61 272 62 265 Z" fill="#e9f6f1" stroke="#287b72" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M67 153 L480 153 L481 270 L66 269 Z" fill="none" stroke="#287b72" stroke-width="1.4" opacity=".35"/>
+  <text x="88" y="186" class="hand eyebrow" fill="#287b72">HUMAN APPROVAL</text>
+  <text x="88" y="222" class="hand label">You sign the Pakt root</text>
+  <text x="88" y="252" class="hand body">Rules are fixed until you approve new ones.</text>
+
+  <path class="line" d="M488 211 C533 209 579 209 627 211" marker-end="url(#arrow)"/>
+  <text x="511" y="192" class="hand small">approve once</text>
+
+  <path d="M647 154 Q644 149 653 149 L884 150 Q892 151 892 159 L891 265 Q892 272 884 273 L652 272 Q645 271 645 263 Z" fill="#fff0d8" stroke="#af742e" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M649 153 L887 153 L888 269 L649 268 Z" fill="none" stroke="#af742e" stroke-width="1.4" opacity=".35"/>
+  <text x="670" y="186" class="hand eyebrow" fill="#9f6524">APPROVED PAKT</text>
+  <text x="670" y="222" class="hand label">Rules + program</text>
+  <text x="670" y="251" class="hand body">One exact root</text>
+
+  <path class="line" d="M767 276 C765 301 765 318 766 339" marker-end="url(#arrow)"/>
+
+  <!-- The exact-order path. -->
+  <path d="M63 362 Q61 354 70 353 L281 354 Q289 355 289 363 L287 478 Q288 485 280 485 L69 484 Q62 483 62 476 Z" fill="#f1f2ff" stroke="#5761a3" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M67 357 L284 357 L284 481 L66 480 Z" fill="none" stroke="#5761a3" stroke-width="1.4" opacity=".3"/>
+  <text x="88" y="389" class="hand eyebrow" fill="#5761a3">AGENT</text>
+  <text x="88" y="425" class="hand label">Exact order</text>
+  <text x="88" y="457" class="hand body">Proposes a trade</text>
+
+  <path class="line" d="M294 419 C314 417 328 418 350 419" marker-end="url(#arrow)"/>
+
+  <path d="M369 362 Q366 355 375 354 L585 354 Q593 355 593 363 L592 478 Q592 485 584 485 L375 483 Q367 482 367 475 Z" fill="#edf5ff" stroke="#3d75a0" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M372 357 L589 357 L589 480 L371 479 Z" fill="none" stroke="#3d75a0" stroke-width="1.4" opacity=".3"/>
+  <text x="393" y="389" class="hand eyebrow" fill="#3d75a0">POLICY PROOF</text>
+  <text x="393" y="425" class="hand label">Check the rules</text>
+  <text x="393" y="457" class="hand body">against this order</text>
+
+  <path class="line" d="M597 419 C614 418 625 419 642 419" marker-end="url(#arrow)"/>
+
+  <path d="M660 362 Q657 354 666 354 L883 353 Q891 354 891 363 L889 478 Q890 485 881 485 L667 484 Q659 483 659 475 Z" fill="#fff0d8" stroke="#af742e" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M663 357 L886 357 L886 481 L663 480 Z" fill="none" stroke="#af742e" stroke-width="1.4" opacity=".3"/>
+  <text x="685" y="389" class="hand eyebrow" fill="#9f6524">NITRO ENCLAVE</text>
+  <text x="685" y="425" class="hand label">Verify proof</text>
+  <text x="685" y="457" class="hand body">and exact order</text>
+
+  <path class="line" d="M895 419 C918 418 936 418 956 419" marker-end="url(#arrow)"/>
+  <text x="902" y="394" class="hand small">allowed</text>
+
+  <path d="M975 362 Q971 355 982 354 L1202 353 Q1210 355 1210 363 L1208 478 Q1208 486 1200 485 L981 484 Q974 484 974 475 Z" fill="#e9f6f1" stroke="#287b72" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M978 357 L1205 357 L1205 481 L978 480 Z" fill="none" stroke="#287b72" stroke-width="1.4" opacity=".3"/>
+  <text x="998" y="389" class="hand eyebrow" fill="#287b72">RESTRICTED SIGNER</text>
+  <text x="998" y="425" class="hand label">Sign exact order</text>
+  <text x="998" y="457" class="hand body">after approval</text>
+
+  <!-- Two outcomes, shown separately. -->
+  <path class="redline" d="M767 489 C766 518 766 528 767 546" marker-end="url(#red-arrow)"/>
+  <text x="787" y="526" class="hand small" fill="#bb4b4b">outside the rules</text>
+  <path d="M660 570 Q658 562 668 562 L880 562 Q890 563 890 573 L889 693 Q889 700 881 700 L667 698 Q660 697 659 690 Z" fill="#fdebea" stroke="#bb4b4b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M663 566 L885 566 L885 695 L663 694 Z" fill="none" stroke="#bb4b4b" stroke-width="1.4" opacity=".3"/>
+  <text x="685" y="600" class="hand eyebrow" fill="#bb4b4b">REFUSED</text>
+  <text x="685" y="638" class="hand label">No signature</text>
+  <text x="685" y="672" class="hand body">Receipt recorded</text>
+
+  <path class="line" d="M1092 489 C1092 518 1092 529 1092 546" marker-end="url(#arrow)"/>
+  <path d="M975 570 Q973 562 982 562 L1202 562 Q1210 563 1210 573 L1209 693 Q1209 700 1200 700 L982 698 Q975 697 974 690 Z" fill="#e9f6f1" stroke="#287b72" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M979 566 L1205 566 L1205 695 L978 694 Z" fill="none" stroke="#287b72" stroke-width="1.4" opacity=".3"/>
+  <text x="998" y="600" class="hand eyebrow" fill="#287b72">AUTHORIZED</text>
+  <text x="998" y="634" class="hand body">Signed order</text>
+  <text x="998" y="660" class="hand body">+ receipt</text>
+  <text x="998" y="686" class="hand body">Submit unchanged</text>
+</svg>
